@@ -1,0 +1,5004 @@
+{
+  "schema": 2,
+  "sources": [
+    {
+      "name": "Natural Earth 1:10m populated places",
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+      "download": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places.geojson",
+      "sha256": "9b8e3de09048ef00dfc70357dbb9fa324493f214b5e0ae4daf1aa79a8d10116b",
+      "checked": "2026-09-30",
+      "license": "public domain"
+    },
+    {
+      "name": "Existing platform curated city names and priorities",
+      "note": "Preserve the existing Chinese city names and major-city anchors."
+    },
+    {
+      "name": "Natural Earth 1:10m global populated places, cached shapefile",
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+      "sha256": "cd149186f03d2603e0410da399b980a4357d0ac32d3a2305a49ed3dffcc41d7b",
+      "license": "public domain",
+      "scope": "global"
+    }
+  ],
+  "source_sha256": "6881a8bbda54346c7cf5dce19ebedd42d13fb4a6702a933994ed309b6fe14cdc",
+  "places": [
+    {
+      "name": "上海",
+      "lon": 121.43456,
+      "lat": 31.2184,
+      "tier": 0,
+      "population": 14987000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "北京",
+      "lon": 116.3942,
+      "lat": 39.90172,
+      "tier": 0,
+      "population": 11106000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "广州",
+      "lon": 113.26179,
+      "lat": 23.12472,
+      "tier": 0,
+      "population": 8829000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "深圳",
+      "lon": 114.06115,
+      "lat": 22.5481,
+      "tier": 0,
+      "population": 7581000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "武汉",
+      "lon": 114.26807,
+      "lat": 30.58198,
+      "tier": 0,
+      "population": 7243000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "香港",
+      "lon": 114.18306,
+      "lat": 22.30693,
+      "tier": 0,
+      "population": 7206000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "天津",
+      "lon": 117.19661,
+      "lat": 39.08277,
+      "tier": 0,
+      "population": 7180000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "台北",
+      "lon": 121.56833,
+      "lat": 25.03583,
+      "tier": 0,
+      "population": 6900273,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "重庆",
+      "lon": 106.59304,
+      "lat": 29.56692,
+      "tier": 0,
+      "population": 6461000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "沈阳",
+      "lon": 123.44803,
+      "lat": 41.80693,
+      "tier": 0,
+      "population": 4787000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "成都",
+      "lon": 104.06807,
+      "lat": 30.67195,
+      "tier": 0,
+      "population": 4123000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "西安",
+      "lon": 108.89305,
+      "lat": 34.27697,
+      "tier": 0,
+      "population": 4009000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "南京",
+      "lon": 118.77803,
+      "lat": 32.05197,
+      "tier": 0,
+      "population": 3679000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "贵阳",
+      "lon": 106.71809,
+      "lat": 26.58199,
+      "tier": 0,
+      "population": 3662000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "哈尔滨",
+      "lon": 126.64804,
+      "lat": 45.75193,
+      "tier": 0,
+      "population": 3621000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "乌鲁木齐",
+      "lon": 87.57306,
+      "lat": 43.80696,
+      "tier": 0,
+      "population": 3575000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "长春",
+      "lon": 125.33804,
+      "lat": 43.86695,
+      "tier": 0,
+      "population": 3183000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "杭州",
+      "lon": 120.16807,
+      "lat": 30.25192,
+      "tier": 0,
+      "population": 3007000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "昆明",
+      "lon": 102.69744,
+      "lat": 25.04286,
+      "tier": 0,
+      "population": 2931000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "太原",
+      "lon": 112.54311,
+      "lat": 37.87696,
+      "tier": 0,
+      "population": 2913000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "济南",
+      "lon": 116.99307,
+      "lat": 36.67693,
+      "tier": 0,
+      "population": 2798000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "郑州",
+      "lon": 113.66315,
+      "lat": 34.75694,
+      "tier": 0,
+      "population": 2636000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "福州",
+      "lon": 119.2981,
+      "lat": 26.08194,
+      "tier": 0,
+      "population": 2606000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "长沙",
+      "lon": 112.96805,
+      "lat": 28.20192,
+      "tier": 0,
+      "population": 2604000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "兰州",
+      "lon": 103.79005,
+      "lat": 36.05797,
+      "tier": 0,
+      "population": 2561000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "石家庄",
+      "lon": 114.47803,
+      "lat": 38.05196,
+      "tier": 0,
+      "population": 2417000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "南昌",
+      "lon": 115.87805,
+      "lat": 28.68194,
+      "tier": 0,
+      "population": 2350000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "南宁",
+      "lon": 108.3181,
+      "lat": 22.82193,
+      "tier": 0,
+      "population": 2167000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "海口",
+      "lon": 110.32003,
+      "lat": 20.05,
+      "tier": 0,
+      "population": 2046189,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "合肥",
+      "lon": 117.27807,
+      "lat": 31.85198,
+      "tier": 0,
+      "population": 2035000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "呼和浩特",
+      "lon": 111.65805,
+      "lat": 40.82192,
+      "tier": 0,
+      "population": 1726000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "西宁",
+      "lon": 101.76806,
+      "lat": 36.62194,
+      "tier": 0,
+      "population": 1048000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "银川",
+      "lon": 106.27109,
+      "lat": 38.46992,
+      "tier": 0,
+      "population": 991000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "澳门",
+      "lon": 113.54438,
+      "lat": 22.18914,
+      "tier": 0,
+      "population": 568700,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "拉萨",
+      "lon": 91.10001,
+      "lat": 29.64502,
+      "tier": 0,
+      "population": 219599,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "东莞",
+      "lon": 113.75047,
+      "lat": 23.02154,
+      "tier": 1,
+      "population": 4528000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "大连",
+      "lon": 121.62789,
+      "lat": 38.92478,
+      "tier": 1,
+      "population": 3167000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "青岛",
+      "lon": 120.32806,
+      "lat": 36.09193,
+      "tier": 1,
+      "population": 2866000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "厦门",
+      "lon": 118.07807,
+      "lat": 24.45194,
+      "tier": 1,
+      "population": 2519000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "温州",
+      "lon": 120.64815,
+      "lat": 28.02193,
+      "tier": 1,
+      "population": 2350000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "烟台",
+      "lon": 121.39808,
+      "lat": 37.53235,
+      "tier": 1,
+      "population": 2116000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "徐州",
+      "lon": 117.17807,
+      "lat": 34.28196,
+      "tier": 1,
+      "population": 2091000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "宁波",
+      "lon": 121.54809,
+      "lat": 29.88192,
+      "tier": 1,
+      "population": 1923000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "唐山",
+      "lon": 118.19243,
+      "lat": 39.62628,
+      "tier": 1,
+      "population": 1879000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "无锡",
+      "lon": 120.29804,
+      "lat": 31.58194,
+      "tier": 1,
+      "population": 1749000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "洛阳",
+      "lon": 112.44447,
+      "lat": 34.64377,
+      "tier": 1,
+      "population": 1715000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "苏州",
+      "lon": 120.61807,
+      "lat": 31.30242,
+      "tier": 1,
+      "population": 1650000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "汕头",
+      "lon": 116.66808,
+      "lat": 23.37195,
+      "tier": 1,
+      "population": 1601000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "潍坊",
+      "lon": 119.15563,
+      "lat": 36.70229,
+      "tier": 1,
+      "population": 1553000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "泉州",
+      "lon": 118.57804,
+      "lat": 24.90196,
+      "tier": 1,
+      "population": 1463000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "常州",
+      "lon": 119.96803,
+      "lat": 31.78193,
+      "tier": 1,
+      "population": 1327000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "金华",
+      "lon": 119.65,
+      "lat": 29.12004,
+      "tier": 1,
+      "population": 1092852,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "珠海",
+      "lon": 113.56583,
+      "lat": 22.27889,
+      "tier": 1,
+      "population": 1023000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "嘉兴",
+      "lon": 120.74804,
+      "lat": 30.77235,
+      "tier": 1,
+      "population": 988000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "南通",
+      "lon": 120.92459,
+      "lat": 31.98227,
+      "tier": 1,
+      "population": 947000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "佛山",
+      "lon": 113.11358,
+      "lat": 23.01048,
+      "tier": 1,
+      "population": 943000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "宜昌",
+      "lon": 111.27807,
+      "lat": 30.70192,
+      "tier": 1,
+      "population": 875000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "镇江",
+      "lon": 119.43048,
+      "lat": 32.17573,
+      "tier": 1,
+      "population": 854000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "芜湖",
+      "lon": 118.36803,
+      "lat": 31.35237,
+      "tier": 1,
+      "population": 810000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "绍兴",
+      "lon": 120.5681,
+      "lat": 30.00232,
+      "tier": 1,
+      "population": 777000,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "扬州",
+      "lon": 119.43001,
+      "lat": 32.4,
+      "tier": 1,
+      "population": 539715,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "惠州",
+      "lon": 114.39998,
+      "lat": 23.07997,
+      "tier": 1,
+      "population": 289201,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "中山",
+      "lon": 113.382391,
+      "lat": 22.521113,
+      "tier": 1,
+      "population": 0,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "淄博",
+      "lon": 117.99646,
+      "lat": 36.82137,
+      "tier": 1,
+      "population": 3061000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "高雄",
+      "lon": 120.2666,
+      "lat": 22.63331,
+      "tier": 1,
+      "population": 2769072,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "包头",
+      "lon": 109.82007,
+      "lat": 40.65415,
+      "tier": 1,
+      "population": 2036000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "齐齐哈尔",
+      "lon": 123.98805,
+      "lat": 47.34692,
+      "tier": 1,
+      "population": 1641000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "淮南",
+      "lon": 116.97804,
+      "lat": 32.63193,
+      "tier": 1,
+      "population": 1451000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "桂林",
+      "lon": 110.27808,
+      "lat": 25.28194,
+      "tier": 1,
+      "population": 987000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "萍乡",
+      "lon": 113.8481,
+      "lat": 27.62195,
+      "tier": 1,
+      "population": 961000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "喀什",
+      "lon": 75.96993,
+      "lat": 39.47634,
+      "tier": 1,
+      "population": 506640,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "和田",
+      "lon": 79.92695,
+      "lat": 37.09971,
+      "tier": 1,
+      "population": 408894,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "嘉峪关",
+      "lon": 98.29998,
+      "lat": 39.82001,
+      "tier": 1,
+      "population": 148279,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "新北",
+      "lon": 121.465,
+      "lat": 25.01278,
+      "tier": 2,
+      "population": 3893740,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "河池",
+      "lon": 108.083,
+      "lat": 24.69525,
+      "tier": 2,
+      "population": 3830000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "漳州",
+      "lon": 117.67002,
+      "lat": 24.52038,
+      "tier": 2,
+      "population": 3531147,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "台中",
+      "lon": 120.68167,
+      "lat": 24.15208,
+      "tier": 2,
+      "population": 2629323,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "湘潭",
+      "lon": 112.90002,
+      "lat": 27.85043,
+      "tier": 2,
+      "population": 2586948,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "锦溪",
+      "lon": 120.82803,
+      "lat": 40.75229,
+      "tier": 2,
+      "population": 2426000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "吉林",
+      "lon": 126.5481,
+      "lat": 43.85192,
+      "tier": 2,
+      "population": 2396000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "南充",
+      "lon": 106.12805,
+      "lat": 30.78238,
+      "tier": 2,
+      "population": 2174000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "枣庄",
+      "lon": 117.56808,
+      "lat": 34.88195,
+      "tier": 2,
+      "population": 2145000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "临沂",
+      "lon": 118.32803,
+      "lat": 35.08194,
+      "tier": 2,
+      "population": 2082000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宿州",
+      "lon": 116.97694,
+      "lat": 33.63806,
+      "tier": 2,
+      "population": 1964000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "南阳",
+      "lon": 112.52807,
+      "lat": 33.00235,
+      "tier": 2,
+      "population": 1944000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "台南",
+      "lon": 120.20004,
+      "lat": 23.0,
+      "tier": 2,
+      "population": 1876312,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "大同",
+      "lon": 113.29805,
+      "lat": 40.08197,
+      "tier": 2,
+      "population": 1873000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "商丘",
+      "lon": 115.64961,
+      "lat": 34.41294,
+      "tier": 2,
+      "population": 1753000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "荆门",
+      "lon": 113.15806,
+      "lat": 30.652,
+      "tier": 2,
+      "population": 1708000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "大庆",
+      "lon": 124.99806,
+      "lat": 46.5819,
+      "tier": 2,
+      "population": 1693000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "六安",
+      "lon": 116.47807,
+      "lat": 31.75229,
+      "tier": 2,
+      "population": 1690000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "万州",
+      "lon": 108.40004,
+      "lat": 30.81999,
+      "tier": 2,
+      "population": 1680000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "鞍山",
+      "lon": 122.93809,
+      "lat": 41.11697,
+      "tier": 2,
+      "population": 1639000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "邯郸",
+      "lon": 114.47803,
+      "lat": 36.58192,
+      "tier": 2,
+      "population": 1631000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "泰安",
+      "lon": 117.11813,
+      "lat": 36.20194,
+      "tier": 2,
+      "population": 1629000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "湛江",
+      "lon": 110.37808,
+      "lat": 21.20193,
+      "tier": 2,
+      "population": 1590000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "仙桃",
+      "lon": 113.4381,
+      "lat": 30.37235,
+      "tier": 2,
+      "population": 1556000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "信阳",
+      "lon": 114.06803,
+      "lat": 32.13232,
+      "tier": 2,
+      "population": 1541000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "泸州",
+      "lon": 105.37807,
+      "lat": 28.88193,
+      "tier": 2,
+      "population": 1537000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "赣州",
+      "lon": 114.95003,
+      "lat": 25.91998,
+      "tier": 2,
+      "population": 1500000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "柳州",
+      "lon": 109.41353,
+      "lat": 24.32078,
+      "tier": 2,
+      "population": 1497000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "抚顺",
+      "lon": 123.86805,
+      "lat": 41.86733,
+      "tier": 2,
+      "population": 1470000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "常德",
+      "lon": 111.6781,
+      "lat": 29.03194,
+      "tier": 2,
+      "population": 1469000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "内江",
+      "lon": 105.04807,
+      "lat": 29.58232,
+      "tier": 2,
+      "population": 1466000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "遂宁",
+      "lon": 105.53139,
+      "lat": 30.53528,
+      "tier": 2,
+      "population": 1425000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "绵阳",
+      "lon": 104.68999,
+      "lat": 31.46483,
+      "tier": 2,
+      "population": 1396000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "马鞍山",
+      "lon": 118.48515,
+      "lat": 31.67256,
+      "tier": 2,
+      "population": 1366302,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "益阳",
+      "lon": 112.32809,
+      "lat": 28.60236,
+      "tier": 2,
+      "population": 1352000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "菏泽",
+      "lon": 115.4481,
+      "lat": 35.23193,
+      "tier": 2,
+      "population": 1338000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "赤峰",
+      "lon": 118.94804,
+      "lat": 42.27196,
+      "tier": 2,
+      "population": 1277000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "淮安",
+      "lon": 119.06597,
+      "lat": 33.58517,
+      "tier": 2,
+      "population": 1264000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "牡丹江",
+      "lon": 129.58807,
+      "lat": 44.57696,
+      "tier": 2,
+      "population": 1244000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "湖州",
+      "lon": 120.09805,
+      "lat": 30.87232,
+      "tier": 2,
+      "population": 1231000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "天水",
+      "lon": 105.91804,
+      "lat": 34.60196,
+      "tier": 2,
+      "population": 1225000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "六盘水",
+      "lon": 104.83139,
+      "lat": 26.59638,
+      "tier": 2,
+      "population": 1221000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "茂名",
+      "lon": 110.87002,
+      "lat": 21.9204,
+      "tier": 2,
+      "population": 1217715,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "济宁",
+      "lon": 116.54809,
+      "lat": 35.40236,
+      "tier": 2,
+      "population": 1186000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "乐山",
+      "lon": 103.7314,
+      "lat": 29.56904,
+      "tier": 2,
+      "population": 1157000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "上饶",
+      "lon": 117.97,
+      "lat": 28.47039,
+      "tier": 2,
+      "population": 1144577,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "玉林",
+      "lon": 110.14806,
+      "lat": 22.63192,
+      "tier": 2,
+      "population": 1127000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "咸阳",
+      "lon": 108.71278,
+      "lat": 34.3475,
+      "tier": 2,
+      "population": 1126000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "保定",
+      "lon": 115.4689,
+      "lat": 38.85834,
+      "tier": 2,
+      "population": 1107000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "自贡",
+      "lon": 104.77806,
+      "lat": 29.40195,
+      "tier": 2,
+      "population": 1105000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "安康",
+      "lon": 109.02,
+      "lat": 32.67998,
+      "tier": 2,
+      "population": 1100000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "株洲",
+      "lon": 113.14809,
+      "lat": 27.83194,
+      "tier": 2,
+      "population": 1080000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "襄阳",
+      "lon": 112.1281,
+      "lat": 32.02194,
+      "tier": 2,
+      "population": 1069000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "诸城",
+      "lon": 119.38009,
+      "lat": 35.98996,
+      "tier": 2,
+      "population": 1060000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "张家口",
+      "lon": 114.85203,
+      "lat": 40.80526,
+      "tier": 2,
+      "population": 1046000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "佳木斯",
+      "lon": 130.34807,
+      "lat": 46.83197,
+      "tier": 2,
+      "population": 1020000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "衡阳",
+      "lon": 112.58807,
+      "lat": 26.88197,
+      "tier": 2,
+      "population": 1016000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "本溪",
+      "lon": 123.74806,
+      "lat": 41.33233,
+      "tier": 2,
+      "population": 1012000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "秦皇岛",
+      "lon": 119.61808,
+      "lat": 39.93231,
+      "tier": 2,
+      "population": 1003000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "保山",
+      "lon": 99.15001,
+      "lat": 25.11998,
+      "tier": 2,
+      "population": 1000000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "永州",
+      "lon": 111.60913,
+      "lat": 26.41792,
+      "tier": 2,
+      "population": 1000000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宜春",
+      "lon": 114.39805,
+      "lat": 27.83528,
+      "tier": 2,
+      "population": 982000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "阳泉",
+      "lon": 113.57001,
+      "lat": 37.86997,
+      "tier": 2,
+      "population": 981448,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "鸡西",
+      "lon": 130.96809,
+      "lat": 45.30191,
+      "tier": 2,
+      "population": 965000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "新沂",
+      "lon": 118.35003,
+      "lat": 34.38001,
+      "tier": 2,
+      "population": 962656,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "锦州",
+      "lon": 121.09809,
+      "lat": 41.12232,
+      "tier": 2,
+      "population": 956000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "新余",
+      "lon": 114.92803,
+      "lat": 27.80197,
+      "tier": 2,
+      "population": 913000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "淮北",
+      "lon": 116.74808,
+      "lat": 33.95231,
+      "tier": 2,
+      "population": 913000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "新乡",
+      "lon": 113.90893,
+      "lat": 35.30157,
+      "tier": 2,
+      "population": 903000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宜宾",
+      "lon": 104.56809,
+      "lat": 28.77193,
+      "tier": 2,
+      "population": 902000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "蚌埠",
+      "lon": 117.32809,
+      "lat": 32.95194,
+      "tier": 2,
+      "population": 894000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "安阳",
+      "lon": 114.34807,
+      "lat": 36.08193,
+      "tier": 2,
+      "population": 887000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "通辽",
+      "lon": 122.26805,
+      "lat": 43.6219,
+      "tier": 2,
+      "population": 884000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "阳江",
+      "lon": 111.97,
+      "lat": 21.85041,
+      "tier": 2,
+      "population": 872363,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "开封",
+      "lon": 114.35482,
+      "lat": 34.79381,
+      "tier": 2,
+      "population": 872000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "丹东",
+      "lon": 124.39164,
+      "lat": 40.14555,
+      "tier": 2,
+      "population": 870000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宣城",
+      "lon": 118.75333,
+      "lat": 30.95445,
+      "tier": 2,
+      "population": 866000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "日照",
+      "lon": 119.45001,
+      "lat": 35.43038,
+      "tier": 2,
+      "population": 865000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "焦作",
+      "lon": 113.25955,
+      "lat": 35.20069,
+      "tier": 2,
+      "population": 857000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "安顺",
+      "lon": 105.92806,
+      "lat": 26.25234,
+      "tier": 2,
+      "population": 849000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "平顶山",
+      "lon": 113.29805,
+      "lat": 33.73235,
+      "tier": 2,
+      "population": 849000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "遵义",
+      "lon": 106.91808,
+      "lat": 27.70197,
+      "tier": 2,
+      "population": 849000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "榆次",
+      "lon": 112.72806,
+      "lat": 37.68234,
+      "tier": 2,
+      "population": 840000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "盐城",
+      "lon": 120.16752,
+      "lat": 33.33788,
+      "tier": 2,
+      "population": 839000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "临汾",
+      "lon": 111.51806,
+      "lat": 36.08229,
+      "tier": 2,
+      "population": 834000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "岳阳",
+      "lon": 113.09807,
+      "lat": 29.382,
+      "tier": 2,
+      "population": 826000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "兴义",
+      "lon": 104.88808,
+      "lat": 25.09236,
+      "tier": 2,
+      "population": 816000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "廊坊",
+      "lon": 116.67805,
+      "lat": 39.52231,
+      "tier": 2,
+      "population": 810000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "昭通",
+      "lon": 103.71807,
+      "lat": 27.32233,
+      "tier": 2,
+      "population": 809000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "凌源",
+      "lon": 119.39916,
+      "lat": 41.24195,
+      "tier": 2,
+      "population": 806000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宝鸡",
+      "lon": 107.14999,
+      "lat": 34.38001,
+      "tier": 2,
+      "population": 800000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "营口",
+      "lon": 122.27807,
+      "lat": 40.67229,
+      "tier": 2,
+      "population": 795000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "辽阳",
+      "lon": 123.17807,
+      "lat": 41.28194,
+      "tier": 2,
+      "population": 794000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "伊春",
+      "lon": 128.89803,
+      "lat": 47.70189,
+      "tier": 2,
+      "population": 777000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "十堰",
+      "lon": 110.78,
+      "lat": 32.57004,
+      "tier": 2,
+      "population": 770000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "阜新",
+      "lon": 121.65806,
+      "lat": 42.01242,
+      "tier": 2,
+      "population": 770000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "晋城",
+      "lon": 112.83,
+      "lat": 35.50038,
+      "tier": 2,
+      "population": 760000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "彰化",
+      "lon": 120.51341,
+      "lat": 24.0734,
+      "tier": 2,
+      "population": 750000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "新竹",
+      "lon": 120.97674,
+      "lat": 24.81679,
+      "tier": 2,
+      "population": 750000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "鹤岗",
+      "lon": 130.29673,
+      "lat": 47.34663,
+      "tier": 2,
+      "population": 743307,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "北海",
+      "lon": 109.10005,
+      "lat": 21.48041,
+      "tier": 2,
+      "population": 728978,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "韶关",
+      "lon": 113.57998,
+      "lat": 24.79997,
+      "tier": 2,
+      "population": 720266,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "连云港",
+      "lon": 119.22619,
+      "lat": 34.58701,
+      "tier": 2,
+      "population": 715600,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "清远",
+      "lon": 113.03009,
+      "lat": 23.7004,
+      "tier": 2,
+      "population": 706717,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "长治",
+      "lon": 113.10528,
+      "lat": 36.18388,
+      "tier": 2,
+      "population": 706000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "阿克苏",
+      "lon": 80.25003,
+      "lat": 41.15001,
+      "tier": 2,
+      "population": 695000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "黄石",
+      "lon": 115.09999,
+      "lat": 30.22,
+      "tier": 2,
+      "population": 688090,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "濮阳",
+      "lon": 114.98,
+      "lat": 35.70039,
+      "tier": 2,
+      "population": 666322,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "沾益",
+      "lon": 103.81665,
+      "lat": 25.60046,
+      "tier": 2,
+      "population": 652604,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "吐鲁番",
+      "lon": 89.16504,
+      "lat": 42.93538,
+      "tier": 2,
+      "population": 651853,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "石河子",
+      "lon": 86.02993,
+      "lat": 44.29997,
+      "tier": 2,
+      "population": 640000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "涿州",
+      "lon": 115.78998,
+      "lat": 39.54005,
+      "tier": 2,
+      "population": 628000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "库尔勒",
+      "lon": 86.15003,
+      "lat": 41.73,
+      "tier": 2,
+      "population": 613000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "泰州",
+      "lon": 119.90001,
+      "lat": 32.49041,
+      "tier": 2,
+      "population": 612356,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "邢台",
+      "lon": 114.50003,
+      "lat": 37.04997,
+      "tier": 2,
+      "population": 611739,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "安庆",
+      "lon": 117.05,
+      "lat": 30.49996,
+      "tier": 2,
+      "population": 580497,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "朔州",
+      "lon": 112.42,
+      "lat": 39.30038,
+      "tier": 2,
+      "population": 570000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "铜陵",
+      "lon": 117.78003,
+      "lat": 30.95045,
+      "tier": 2,
+      "population": 562832,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "威海",
+      "lon": 122.09998,
+      "lat": 37.49997,
+      "tier": 2,
+      "population": 560255,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "四平",
+      "lon": 124.33002,
+      "lat": 43.17001,
+      "tier": 2,
+      "population": 555609,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "九江",
+      "lon": 115.98004,
+      "lat": 29.72998,
+      "tier": 2,
+      "population": 545616,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "伊宁",
+      "lon": 81.35001,
+      "lat": 43.90002,
+      "tier": 2,
+      "population": 542507,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "临夏",
+      "lon": 103.20005,
+      "lat": 35.60001,
+      "tier": 2,
+      "population": 534555,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "江门",
+      "lon": 113.08001,
+      "lat": 22.58039,
+      "tier": 2,
+      "population": 532419,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "沧州",
+      "lon": 116.87001,
+      "lat": 38.32039,
+      "tier": 2,
+      "population": 527681,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "吉安",
+      "lon": 115.0,
+      "lat": 27.13042,
+      "tier": 2,
+      "population": 520248,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "荆州",
+      "lon": 112.22999,
+      "lat": 30.32002,
+      "tier": 2,
+      "population": 520000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "辽源",
+      "lon": 125.12997,
+      "lat": 42.89998,
+      "tier": 2,
+      "population": 506548,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "屏东",
+      "lon": 120.48168,
+      "lat": 22.6817,
+      "tier": 2,
+      "population": 503530,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "双鸭山",
+      "lon": 131.35001,
+      "lat": 46.67042,
+      "tier": 2,
+      "population": 500000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "嘉义",
+      "lon": 120.43507,
+      "lat": 23.47545,
+      "tier": 2,
+      "population": 500000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "基隆",
+      "lon": 121.73328,
+      "lat": 25.13326,
+      "tier": 2,
+      "population": 500000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "武威",
+      "lon": 102.64101,
+      "lat": 37.92801,
+      "tier": 2,
+      "population": 493092,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "梧州",
+      "lon": 111.32002,
+      "lat": 23.48003,
+      "tier": 2,
+      "population": 442315,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "松原",
+      "lon": 124.82002,
+      "lat": 45.18038,
+      "tier": 3,
+      "population": 495900,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "延吉",
+      "lon": 129.51276,
+      "lat": 42.8823,
+      "tier": 3,
+      "population": 488740,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "肇庆",
+      "lon": 112.45002,
+      "lat": 23.05041,
+      "tier": 3,
+      "population": 480000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "朝阳",
+      "lon": 120.41998,
+      "lat": 41.55042,
+      "tier": 3,
+      "population": 470296,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "攀枝花",
+      "lon": 101.73001,
+      "lat": 26.54999,
+      "tier": 3,
+      "population": 461513,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "衡水",
+      "lon": 115.70001,
+      "lat": 37.71998,
+      "tier": 3,
+      "population": 456356,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "七台河",
+      "lon": 131.00906,
+      "lat": 45.76785,
+      "tier": 3,
+      "population": 450617,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "承德",
+      "lon": 117.93,
+      "lat": 40.96038,
+      "tier": 3,
+      "population": 449325,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "许昌",
+      "lon": 113.82002,
+      "lat": 34.02039,
+      "tier": 3,
+      "population": 449258,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "广元",
+      "lon": 105.87001,
+      "lat": 32.43,
+      "tier": 3,
+      "population": 437435,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "潮州",
+      "lon": 116.63003,
+      "lat": 23.68004,
+      "tier": 3,
+      "population": 424787,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "漯河",
+      "lon": 114.02998,
+      "lat": 33.57,
+      "tier": 3,
+      "population": 417356,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "梅州",
+      "lon": 116.11998,
+      "lat": 24.30049,
+      "tier": 3,
+      "population": 414930,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "宣化",
+      "lon": 115.02434,
+      "lat": 40.59441,
+      "tier": 3,
+      "population": 409745,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "荆门",
+      "lon": 112.20103,
+      "lat": 31.03141,
+      "tier": 3,
+      "population": 400000,
+      "priority": false,
+      "domestic": true
+    },
+    {
+      "name": "东京",
+      "lon": 139.69171,
+      "lat": 35.6895,
+      "tier": 0,
+      "population": 35676000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "孟买",
+      "lon": 72.88261,
+      "lat": 19.07283,
+      "tier": 0,
+      "population": 18978000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "加尔各答",
+      "lon": 88.36304,
+      "lat": 22.56263,
+      "tier": 0,
+      "population": 14787000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "达卡",
+      "lon": 90.40744,
+      "lat": 23.7104,
+      "tier": 0,
+      "population": 12797394,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "大阪",
+      "lon": 135.50218,
+      "lat": 34.69374,
+      "tier": 0,
+      "population": 11294000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "马尼拉",
+      "lon": 120.9822,
+      "lat": 14.6042,
+      "tier": 0,
+      "population": 11100000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "首尔",
+      "lon": 126.9784,
+      "lat": 37.566,
+      "tier": 0,
+      "population": 9796000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "曼谷",
+      "lon": 100.50144,
+      "lat": 13.75398,
+      "tier": 0,
+      "population": 6704000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "胡志明市",
+      "lon": 106.62965,
+      "lat": 10.82302,
+      "tier": 0,
+      "population": 5314000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "河内",
+      "lon": 105.84117,
+      "lat": 21.0245,
+      "tier": 0,
+      "population": 4378000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "仰光",
+      "lon": 96.15611,
+      "lat": 16.80528,
+      "tier": 0,
+      "population": 4088000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "平壤",
+      "lon": 125.75432,
+      "lat": 39.03385,
+      "tier": 0,
+      "population": 3300000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "喀布尔",
+      "lon": 69.17233,
+      "lat": 34.52813,
+      "tier": 0,
+      "population": 3277000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "塔什干",
+      "lon": 69.21627,
+      "lat": 41.26465,
+      "tier": 0,
+      "population": 2184000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "金边",
+      "lon": 104.91601,
+      "lat": 11.56245,
+      "tier": 0,
+      "population": 1466000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "吉隆坡",
+      "lon": 101.68653,
+      "lat": 3.1412,
+      "tier": 0,
+      "population": 1448000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "阿拉木图",
+      "lon": 76.92848,
+      "lat": 43.25667,
+      "tier": 0,
+      "population": 1209000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "加德满都",
+      "lon": 85.3206,
+      "lat": 27.70169,
+      "tier": 0,
+      "population": 895000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "乌兰巴托",
+      "lon": 106.88324,
+      "lat": 47.90771,
+      "tier": 0,
+      "population": 885000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "伊斯兰堡",
+      "lon": 73.04329,
+      "lat": 33.72148,
+      "tier": 0,
+      "population": 780000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "万象",
+      "lon": 102.6,
+      "lat": 17.96667,
+      "tier": 0,
+      "population": 754000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "符拉迪沃斯托克",
+      "lon": 131.87353,
+      "lat": 43.10562,
+      "tier": 0,
+      "population": 587022,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "新德里",
+      "lon": 77.23149,
+      "lat": 28.61282,
+      "tier": 0,
+      "population": 317797,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "科伦坡",
+      "lon": 79.84868,
+      "lat": 6.93548,
+      "tier": 0,
+      "population": 217000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "卡拉奇",
+      "lon": 66.98806,
+      "lat": 24.87194,
+      "tier": 0,
+      "population": 12130000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新加坡",
+      "lon": 103.85388,
+      "lat": 1.29498,
+      "tier": 0,
+      "population": 5183700,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马什哈德",
+      "lon": 59.56805,
+      "lat": 36.27197,
+      "tier": 0,
+      "population": 2469000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巨港",
+      "lon": 104.74808,
+      "lat": -2.97809,
+      "tier": 0,
+      "population": 1749000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "迪拜",
+      "lon": 55.27803,
+      "lat": 25.23194,
+      "tier": 0,
+      "population": 1379000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "叶卡捷琳堡",
+      "lon": 60.59801,
+      "lat": 56.85198,
+      "tier": 0,
+      "population": 1313000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "车里雅宾斯克",
+      "lon": 61.43672,
+      "lat": 55.15694,
+      "tier": 0,
+      "population": 1091000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "乌法",
+      "lon": 56.03809,
+      "lat": 54.79192,
+      "tier": 0,
+      "population": 1018000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "彼尔姆",
+      "lon": 56.24805,
+      "lat": 58.00191,
+      "tier": 0,
+      "population": 997000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新山",
+      "lon": 103.72809,
+      "lat": 1.48197,
+      "tier": 0,
+      "population": 875000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴东",
+      "lon": 100.35807,
+      "lat": -0.95806,
+      "tier": 0,
+      "population": 855000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "北干巴鲁",
+      "lon": 101.42307,
+      "lat": 0.56691,
+      "tier": 0,
+      "population": 799000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "奎达",
+      "lon": 67.02305,
+      "lat": 30.22195,
+      "tier": 0,
+      "population": 768000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "钦奈",
+      "lon": 80.27847,
+      "lat": 13.08784,
+      "tier": 1,
+      "population": 7163000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "班加罗尔",
+      "lon": 77.59369,
+      "lat": 12.97194,
+      "tier": 1,
+      "population": 6787000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "拉合尔",
+      "lon": 74.35071,
+      "lat": 31.558,
+      "tier": 1,
+      "population": 6577000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "釜山",
+      "lon": 129.04028,
+      "lat": 35.10278,
+      "tier": 1,
+      "population": 3480000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "名古屋",
+      "lon": 136.90656,
+      "lat": 35.18147,
+      "tier": 1,
+      "population": 3230000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "福冈",
+      "lon": 130.41806,
+      "lat": 33.60639,
+      "tier": 1,
+      "population": 2792000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "海防",
+      "lon": 106.68345,
+      "lat": 20.86481,
+      "tier": 1,
+      "population": 1969000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "曼德勒",
+      "lon": 96.08333,
+      "lat": 21.97473,
+      "tier": 1,
+      "population": 1300000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "杜尚别",
+      "lon": 68.77905,
+      "lat": 38.53575,
+      "tier": 1,
+      "population": 1086244,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "岘港",
+      "lon": 108.22083,
+      "lat": 16.06778,
+      "tier": 1,
+      "population": 1000000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "比什凯克",
+      "lon": 74.59,
+      "lat": 42.87,
+      "tier": 1,
+      "population": 837000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "宿务",
+      "lon": 123.89167,
+      "lat": 10.31672,
+      "tier": 1,
+      "population": 815000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "伊尔库茨克",
+      "lon": 104.29639,
+      "lat": 52.29778,
+      "tier": 1,
+      "population": 586695,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "哈巴罗夫斯克",
+      "lon": 135.09278,
+      "lat": 48.48271,
+      "tier": 1,
+      "population": 579000,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "清迈",
+      "lon": 98.98172,
+      "lat": 18.79038,
+      "tier": 1,
+      "population": 397211,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "廷布",
+      "lon": 89.64191,
+      "lat": 27.46609,
+      "tier": 1,
+      "population": 98676,
+      "priority": true,
+      "domestic": false
+    },
+    {
+      "name": "德里",
+      "lon": 77.22806,
+      "lat": 28.67194,
+      "tier": 1,
+      "population": 15926000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "海德拉巴",
+      "lon": 78.47801,
+      "lat": 17.40193,
+      "tier": 1,
+      "population": 6376000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿麼达巴德",
+      "lon": 72.57806,
+      "lat": 23.032,
+      "tier": 1,
+      "population": 5375000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "浦那",
+      "lon": 73.85189,
+      "lat": 18.51639,
+      "tier": 1,
+      "population": 4672000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "吉大港",
+      "lon": 91.79802,
+      "lat": 22.33194,
+      "tier": 1,
+      "population": 4529000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "苏拉特",
+      "lon": 72.83809,
+      "lat": 21.20193,
+      "tier": 1,
+      "population": 3842000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "坎普尔",
+      "lon": 80.31805,
+      "lat": 26.46195,
+      "tier": 1,
+      "population": 3162000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "斋浦尔",
+      "lon": 75.80804,
+      "lat": 26.92308,
+      "tier": 1,
+      "population": 2917000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "札幌",
+      "lon": 141.3381,
+      "lat": 43.07693,
+      "tier": 1,
+      "population": 2544000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "纳格普尔",
+      "lon": 79.08805,
+      "lat": 21.17191,
+      "tier": 1,
+      "population": 2454000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴特那",
+      "lon": 85.12809,
+      "lat": 25.62691,
+      "tier": 1,
+      "population": 2158000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "棉兰",
+      "lon": 98.64809,
+      "lat": 3.58192,
+      "tier": 1,
+      "population": 2115000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "广岛",
+      "lon": 132.44097,
+      "lat": 34.38978,
+      "tier": 1,
+      "population": 2045000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "博帕尔",
+      "lon": 77.40805,
+      "lat": 23.25193,
+      "tier": 1,
+      "population": 1727000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "科伊巴拓雷",
+      "lon": 76.94808,
+      "lat": 11.00191,
+      "tier": 1,
+      "population": 1696000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "维沙卡帕特南",
+      "lon": 83.21985,
+      "lat": 17.6829,
+      "tier": 1,
+      "population": 1529000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "木尔坦",
+      "lon": 71.45306,
+      "lat": 30.20192,
+      "tier": 1,
+      "population": 1522000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "海得拉巴",
+      "lon": 68.37304,
+      "lat": 25.38193,
+      "tier": 1,
+      "population": 1459000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "达沃",
+      "lon": 125.62805,
+      "lat": 7.11196,
+      "tier": 1,
+      "population": 1402000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新西伯利亚",
+      "lon": 82.9581,
+      "lat": 55.03191,
+      "tier": 1,
+      "population": 1389000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "瓦兰希",
+      "lon": 82.99809,
+      "lat": 25.33194,
+      "tier": 1,
+      "population": 1352000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿桑索尔",
+      "lon": 86.98139,
+      "lat": 23.68528,
+      "tier": 1,
+      "population": 1328000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "白沙瓦",
+      "lon": 71.53306,
+      "lat": 34.00696,
+      "tier": 1,
+      "population": 1303000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贾姆谢德布尔",
+      "lon": 86.19557,
+      "lat": 22.78948,
+      "tier": 1,
+      "population": 1300000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马杜赖",
+      "lon": 78.11808,
+      "lat": 9.92197,
+      "tier": 1,
+      "population": 1294000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿姆利则",
+      "lon": 74.86805,
+      "lat": 31.64194,
+      "tier": 1,
+      "population": 1212000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "沙迦",
+      "lon": 55.40648,
+      "lat": 25.37138,
+      "tier": 1,
+      "population": 1103027,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "比莱",
+      "lon": 81.37221,
+      "lat": 21.21126,
+      "tier": 1,
+      "population": 1097000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "科兹科德",
+      "lon": 75.76804,
+      "lat": 11.25238,
+      "tier": 1,
+      "population": 953000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "奈比多",
+      "lon": 96.11667,
+      "lat": 19.7685,
+      "tier": 1,
+      "population": 930000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克拉斯诺亚尔斯克",
+      "lon": 92.86405,
+      "lat": 56.01593,
+      "tier": 1,
+      "population": 925000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "布巴内什瓦尔",
+      "lon": 85.82541,
+      "lat": 20.27237,
+      "tier": 1,
+      "population": 844000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马斯喀特",
+      "lon": 58.59331,
+      "lat": 23.61332,
+      "tier": 1,
+      "population": 734697,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿什哈巴德",
+      "lon": 58.3833,
+      "lat": 37.95,
+      "tier": 1,
+      "population": 727700,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴尔瑙尔",
+      "lon": 83.74501,
+      "lat": 53.355,
+      "tier": 1,
+      "population": 599579,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "托木斯克",
+      "lon": 84.97501,
+      "lat": 56.49499,
+      "tier": 1,
+      "population": 535479,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "卡拉干达",
+      "lon": 73.11501,
+      "lat": 49.88498,
+      "tier": 1,
+      "population": 451800,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "长崎",
+      "lon": 129.88503,
+      "lat": 32.76499,
+      "tier": 1,
+      "population": 435455,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "伊洛伊洛",
+      "lon": 122.54502,
+      "lat": 10.70504,
+      "tier": 1,
+      "population": 387681,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "努尔苏丹",
+      "lon": 71.42777,
+      "lat": 51.18113,
+      "tier": 1,
+      "population": 345604,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "赤塔",
+      "lon": 113.465,
+      "lat": 52.05503,
+      "tier": 1,
+      "population": 308500,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "斯里巴加湾",
+      "lon": 114.93328,
+      "lat": 4.88333,
+      "tier": 1,
+      "population": 296500,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "布拉茨克",
+      "lon": 101.61503,
+      "lat": 56.157,
+      "tier": 1,
+      "population": 246348,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "打拉根",
+      "lon": 117.63302,
+      "lat": 3.30002,
+      "tier": 1,
+      "population": 193069,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马累",
+      "lon": 73.5089,
+      "lat": 4.17204,
+      "tier": 1,
+      "population": 112927,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "额尔登特",
+      "lon": 104.11834,
+      "lat": 49.0533,
+      "tier": 1,
+      "population": 79647,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "維多利亞",
+      "lon": 55.44999,
+      "lat": -4.61663,
+      "tier": 1,
+      "population": 33576,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "梅莱凯奥克",
+      "lon": 134.62655,
+      "lat": 7.4874,
+      "tier": 1,
+      "population": 7026,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿马拉瓦蒂",
+      "lon": 80.52432,
+      "lat": 16.53366,
+      "tier": 2,
+      "population": 5800000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "豪拉",
+      "lon": 88.31852,
+      "lat": 22.5847,
+      "tier": 2,
+      "population": 4841638,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "横滨",
+      "lon": 139.60202,
+      "lat": 35.43066,
+      "tier": 2,
+      "population": 3697894,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "奎松",
+      "lon": 121.02997,
+      "lat": 14.65043,
+      "tier": 2,
+      "population": 2761720,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "勒克瑙",
+      "lon": 80.91305,
+      "lat": 26.85699,
+      "tier": 2,
+      "population": 2695000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "费萨拉巴德",
+      "lon": 73.10805,
+      "lat": 31.41193,
+      "tier": 2,
+      "population": 2617000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "仁川廣域",
+      "lon": 126.64029,
+      "lat": 37.47809,
+      "tier": 2,
+      "population": 2550000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "乔治",
+      "lon": 100.32937,
+      "lat": 5.41361,
+      "tier": 2,
+      "population": 2500000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "大邱",
+      "lon": 128.60503,
+      "lat": 35.86874,
+      "tier": 2,
+      "population": 2460000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "仙台",
+      "lon": 140.86967,
+      "lat": 38.26844,
+      "tier": 2,
+      "population": 2250000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "因多尔",
+      "lon": 75.86308,
+      "lat": 22.71701,
+      "tier": 2,
+      "population": 2026000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "赛杜",
+      "lon": 72.34999,
+      "lat": 34.75003,
+      "tier": 2,
+      "population": 1860310,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "拉瓦尔品第",
+      "lon": 73.0675,
+      "lat": 33.591,
+      "tier": 2,
+      "population": 1858000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "京都",
+      "lon": 135.74805,
+      "lat": 35.03194,
+      "tier": 2,
+      "population": 1805000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "瓦多达拉",
+      "lon": 73.17807,
+      "lat": 22.31197,
+      "tier": 2,
+      "population": 1756000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "卢迪亚纳",
+      "lon": 75.87031,
+      "lat": 30.92971,
+      "tier": 2,
+      "population": 1649000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿格拉",
+      "lon": 78.01308,
+      "lat": 27.17237,
+      "tier": 2,
+      "population": 1592000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "卡延",
+      "lon": 73.16017,
+      "lat": 19.25023,
+      "tier": 2,
+      "population": 1576614,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "库尔纳",
+      "lon": 89.55805,
+      "lat": 22.84193,
+      "tier": 2,
+      "population": 1553000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "神戶",
+      "lon": 135.16998,
+      "lat": 34.67999,
+      "tier": 2,
+      "population": 1528478,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "戈奇",
+      "lon": 76.22197,
+      "lat": 10.01695,
+      "tier": 2,
+      "population": 1519000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "古吉兰瓦拉",
+      "lon": 74.18308,
+      "lat": 32.16237,
+      "tier": 2,
+      "population": 1513000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "纳西克",
+      "lon": 73.77804,
+      "lat": 20.00237,
+      "tier": 2,
+      "population": 1473000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "大田广域",
+      "lon": 127.42308,
+      "lat": 36.33749,
+      "tier": 2,
+      "population": 1468000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "光州广域",
+      "lon": 126.90849,
+      "lat": 35.17291,
+      "tier": 2,
+      "population": 1440000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "川崎",
+      "lon": 139.705,
+      "lat": 35.52999,
+      "tier": 2,
+      "population": 1437266,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "密拉特",
+      "lon": 77.69805,
+      "lat": 29.00236,
+      "tier": 2,
+      "population": 1398000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "法里达巴德",
+      "lon": 77.31472,
+      "lat": 28.43528,
+      "tier": 2,
+      "population": 1394000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "加济阿巴德",
+      "lon": 77.40645,
+      "lat": 28.66233,
+      "tier": 2,
+      "population": 1341000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贾巴尔普尔",
+      "lon": 79.95311,
+      "lat": 23.177,
+      "tier": 2,
+      "population": 1285000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "莱科特",
+      "lon": 70.79806,
+      "lat": 22.31197,
+      "tier": 2,
+      "population": 1260000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "丹巴德",
+      "lon": 86.41804,
+      "lat": 23.80234,
+      "tier": 2,
+      "population": 1246000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "瓦朗加尔",
+      "lon": 79.57999,
+      "lat": 18.01,
+      "tier": 2,
+      "population": 1203853,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "安拉阿巴德",
+      "lon": 81.83806,
+      "lat": 25.45694,
+      "tier": 2,
+      "population": 1201000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿伯塔巴德",
+      "lon": 73.1995,
+      "lat": 34.1495,
+      "tier": 2,
+      "population": 1183647,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "斯利那加",
+      "lon": 74.82831,
+      "lat": 34.06947,
+      "tier": 2,
+      "population": 1140000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "维杰亚瓦达",
+      "lon": 80.62806,
+      "lat": 16.52191,
+      "tier": 2,
+      "population": 1137000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "鄂木斯克",
+      "lon": 73.39801,
+      "lat": 54.99193,
+      "tier": 2,
+      "population": 1135000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "南浦特别",
+      "lon": 125.45049,
+      "lat": 38.76887,
+      "tier": 2,
+      "population": 1127000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "卡加延德奥罗",
+      "lon": 124.6853,
+      "lat": 8.45084,
+      "tier": 2,
+      "population": 1121561,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "芹苴",
+      "lon": 105.77002,
+      "lat": 10.04999,
+      "tier": 2,
+      "population": 1121000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "奥郎加巴德",
+      "lon": 75.32895,
+      "lat": 19.86169,
+      "tier": 2,
+      "population": 1113000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "昌原",
+      "lon": 128.58356,
+      "lat": 35.2191,
+      "tier": 2,
+      "population": 1081499,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "水原",
+      "lon": 127.00895,
+      "lat": 37.25973,
+      "tier": 2,
+      "population": 1078000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "蔚山广域",
+      "lon": 129.31501,
+      "lat": 35.54868,
+      "tier": 2,
+      "population": 1061000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "索拉普",
+      "lon": 75.89806,
+      "lat": 17.67235,
+      "tier": 2,
+      "population": 1057000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "兰契",
+      "lon": 85.32808,
+      "lat": 23.37195,
+      "tier": 2,
+      "population": 1044000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "北九州",
+      "lon": 130.82002,
+      "lat": 33.8704,
+      "tier": 2,
+      "population": 997536,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "焦特布尔",
+      "lon": 73.01483,
+      "lat": 26.29371,
+      "tier": 2,
+      "population": 995000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "古瓦哈提",
+      "lon": 91.76805,
+      "lat": 26.16196,
+      "tier": 2,
+      "population": 983000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "昌迪加尔",
+      "lon": 76.77806,
+      "lat": 30.72194,
+      "tier": 2,
+      "population": 979000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "瓜廖尔",
+      "lon": 78.1692,
+      "lat": 26.20003,
+      "tier": 2,
+      "population": 978000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "滨松",
+      "lon": 137.73272,
+      "lat": 34.71807,
+      "tier": 2,
+      "population": 977023,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴生",
+      "lon": 101.44706,
+      "lat": 3.04328,
+      "tier": 2,
+      "population": 956000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "特里凡得琅",
+      "lon": 76.92519,
+      "lat": 8.51552,
+      "tier": 2,
+      "population": 954000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "蒂鲁吉拉帕利",
+      "lon": 78.68751,
+      "lat": 10.80054,
+      "tier": 2,
+      "population": 951000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "三投斯将军",
+      "lon": 125.17473,
+      "lat": 6.11083,
+      "tier": 2,
+      "population": 950530,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "顺化",
+      "lon": 107.58004,
+      "lat": 16.46999,
+      "tier": 2,
+      "population": 950000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "描戈律",
+      "lon": 122.98168,
+      "lat": 10.63169,
+      "tier": 2,
+      "population": 949354,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "城南",
+      "lon": 127.13583,
+      "lat": 37.44056,
+      "tier": 2,
+      "population": 942000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "那霸",
+      "lon": 127.67297,
+      "lat": 26.20717,
+      "tier": 2,
+      "population": 905238,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "高阳",
+      "lon": 126.8353,
+      "lat": 37.65468,
+      "tier": 2,
+      "population": 903000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "胡布利",
+      "lon": 75.12307,
+      "lat": 15.36192,
+      "tier": 2,
+      "population": 890000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "迈索尔",
+      "lon": 76.65807,
+      "lat": 12.31193,
+      "tier": 2,
+      "population": 887000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "赖布尔",
+      "lon": 81.63306,
+      "lat": 21.23694,
+      "tier": 2,
+      "population": 875000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "萨兰姆",
+      "lon": 78.17813,
+      "lat": 11.67194,
+      "tier": 2,
+      "population": 873000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "冈山",
+      "lon": 133.91709,
+      "lat": 34.67203,
+      "tier": 2,
+      "population": 866092,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "富川",
+      "lon": 126.78111,
+      "lat": 37.50084,
+      "tier": 2,
+      "population": 866000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贾朗达尔",
+      "lon": 75.56707,
+      "lat": 31.33687,
+      "tier": 2,
+      "population": 855000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "科塔",
+      "lon": 75.83305,
+      "lat": 25.18194,
+      "tier": 2,
+      "population": 827000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "占西",
+      "lon": 78.55747,
+      "lat": 25.45295,
+      "tier": 2,
+      "population": 826494,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "北海",
+      "lon": 100.40001,
+      "lat": 5.41707,
+      "tier": 2,
+      "population": 821652,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴雷利",
+      "lon": 79.41805,
+      "lat": 28.34733,
+      "tier": 2,
+      "population": 817000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "拉杰沙希",
+      "lon": 88.60307,
+      "lat": 24.37693,
+      "tier": 2,
+      "population": 810000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "归仁",
+      "lon": 109.18004,
+      "lat": 13.77997,
+      "tier": 2,
+      "population": 805290,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿里格尔",
+      "lon": 78.05984,
+      "lat": 27.89416,
+      "tier": 2,
+      "population": 805000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "皮文迪",
+      "lon": 73.12805,
+      "lat": 19.35196,
+      "tier": 2,
+      "population": 795000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "查谟",
+      "lon": 74.84479,
+      "lat": 32.71373,
+      "tier": 2,
+      "population": 791000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马六甲",
+      "lon": 102.24646,
+      "lat": 2.20641,
+      "tier": 2,
+      "population": 788706,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "莫拉达巴德",
+      "lon": 78.75484,
+      "lat": 28.84374,
+      "tier": 2,
+      "population": 787000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "门格洛尔",
+      "lon": 74.84999,
+      "lat": 12.90002,
+      "tier": 2,
+      "population": 776632,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "清州",
+      "lon": 127.5012,
+      "lat": 36.6439,
+      "tier": 2,
+      "population": 775096,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "咸兴",
+      "lon": 127.54349,
+      "lat": 39.912,
+      "tier": 2,
+      "population": 773000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "三宝颜",
+      "lon": 122.07809,
+      "lat": 6.92192,
+      "tier": 2,
+      "population": 773000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "费尔干纳",
+      "lon": 71.78,
+      "lat": 40.38997,
+      "tier": 2,
+      "population": 750000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "纳曼干",
+      "lon": 71.66998,
+      "lat": 41.00002,
+      "tier": 2,
+      "population": 750000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "戈尔哈布尔",
+      "lon": 74.22001,
+      "lat": 16.7,
+      "tier": 2,
+      "population": 750000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "那牙",
+      "lon": 123.18136,
+      "lat": 13.61915,
+      "tier": 2,
+      "population": 741635,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "安山",
+      "lon": 126.85953,
+      "lat": 37.34807,
+      "tier": 2,
+      "population": 739493,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿姆劳蒂",
+      "lon": 77.78181,
+      "lat": 20.92562,
+      "tier": 2,
+      "population": 734451,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "熊本",
+      "lon": 130.70064,
+      "lat": 32.80093,
+      "tier": 2,
+      "population": 718232,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "坎大哈",
+      "lon": 65.69495,
+      "lat": 31.61002,
+      "tier": 2,
+      "population": 715542,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "德拉敦",
+      "lon": 78.05001,
+      "lat": 30.32041,
+      "tier": 2,
+      "population": 714223,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "全州",
+      "lon": 127.14039,
+      "lat": 35.83142,
+      "tier": 2,
+      "population": 711424,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "撒马尔罕",
+      "lon": 66.945,
+      "lat": 39.67002,
+      "tier": 2,
+      "population": 708000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "静冈",
+      "lon": 138.38539,
+      "lat": 34.98584,
+      "tier": 2,
+      "population": 701561,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马莱冈",
+      "lon": 74.525,
+      "lat": 20.56036,
+      "tier": 2,
+      "population": 690844,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "内洛尔",
+      "lon": 79.98994,
+      "lat": 14.43998,
+      "tier": 2,
+      "population": 678004,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "戈勒克布爾",
+      "lon": 83.38002,
+      "lat": 26.75039,
+      "tier": 2,
+      "population": 674246,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "怡保",
+      "lon": 101.06498,
+      "lat": 4.59999,
+      "tier": 2,
+      "population": 673318,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "清津",
+      "lon": 129.79,
+      "lat": 41.78462,
+      "tier": 2,
+      "population": 672614,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "宇都宫",
+      "lon": 139.87,
+      "lat": 36.54998,
+      "tier": 2,
+      "population": 667752,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "诗法摩嘎",
+      "lon": 75.56003,
+      "lat": 13.93038,
+      "tier": 2,
+      "population": 654055,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "边和",
+      "lon": 106.83006,
+      "lat": 10.97001,
+      "tier": 2,
+      "population": 652646,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "蒂鲁普",
+      "lon": 77.33,
+      "lat": 11.08042,
+      "tier": 2,
+      "population": 650000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "安集延",
+      "lon": 72.33997,
+      "lat": 40.79,
+      "tier": 2,
+      "population": 650000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "鲁吉拉",
+      "lon": 84.82995,
+      "lat": 22.23041,
+      "tier": 2,
+      "population": 625831,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "楠代德",
+      "lon": 77.30834,
+      "lat": 19.19726,
+      "tier": 2,
+      "population": 623708,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "本努",
+      "lon": 70.59857,
+      "lat": 32.98898,
+      "tier": 2,
+      "population": 622419,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "帕盧",
+      "lon": 119.83304,
+      "lat": -0.90704,
+      "tier": 2,
+      "population": 612445,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贝尔高姆",
+      "lon": 74.505,
+      "lat": 15.86501,
+      "tier": 2,
+      "population": 608756,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "坤甸",
+      "lon": 109.31998,
+      "lat": -0.02999,
+      "tier": 2,
+      "population": 607311,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马辰",
+      "lon": 114.58008,
+      "lat": -3.32999,
+      "tier": 2,
+      "population": 603576,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "桑格丽",
+      "lon": 74.57502,
+      "lat": 16.8604,
+      "tier": 2,
+      "population": 601214,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "扎黑丹",
+      "lon": 60.83002,
+      "lat": 29.49999,
+      "tier": 2,
+      "population": 598887,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贾拉拉巴德",
+      "lon": 70.4361,
+      "lat": 34.44153,
+      "tier": 2,
+      "population": 597971,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "钱德拉普尔",
+      "lon": 79.30001,
+      "lat": 19.96998,
+      "tier": 2,
+      "population": 595118,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "长野",
+      "lon": 138.17001,
+      "lat": 36.65,
+      "tier": 2,
+      "population": 594311,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "荣",
+      "lon": 105.68,
+      "lat": 18.69998,
+      "tier": 2,
+      "population": 593645,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "沙马林达",
+      "lon": 117.15,
+      "lat": -0.50004,
+      "tier": 2,
+      "population": 592228,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿杰梅尔",
+      "lon": 74.63998,
+      "lat": 26.45,
+      "tier": 2,
+      "population": 589985,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克塔克",
+      "lon": 85.88994,
+      "lat": 20.47,
+      "tier": 2,
+      "population": 580000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "八王子",
+      "lon": 139.32606,
+      "lat": 35.65771,
+      "tier": 2,
+      "population": 579399,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克尔曼",
+      "lon": 57.08002,
+      "lat": 30.3,
+      "tier": 2,
+      "population": 577514,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "比卡内尔",
+      "lon": 73.33224,
+      "lat": 28.01508,
+      "tier": 2,
+      "population": 576015,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "古晋",
+      "lon": 110.33,
+      "lat": 1.52997,
+      "tier": 2,
+      "population": 570407,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新潟",
+      "lon": 139.04003,
+      "lat": 37.92,
+      "tier": 2,
+      "population": 569797,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "民礼",
+      "lon": 98.50007,
+      "lat": 3.62036,
+      "tier": 2,
+      "population": 564979,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "鹿兒島",
+      "lon": 130.56106,
+      "lat": 31.58597,
+      "tier": 2,
+      "population": 555352,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴夫那加尔",
+      "lon": 72.12995,
+      "lat": 21.77842,
+      "tier": 2,
+      "population": 554978,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴哈瓦尔布尔",
+      "lon": 71.67499,
+      "lat": 29.38997,
+      "tier": 2,
+      "population": 552607,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "金泽",
+      "lon": 136.64002,
+      "lat": 36.56,
+      "tier": 2,
+      "population": 551249,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "奥伦堡",
+      "lon": 55.11001,
+      "lat": 51.77998,
+      "tier": 2,
+      "population": 550204,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "希萨尔",
+      "lon": 75.72503,
+      "lat": 29.16999,
+      "tier": 2,
+      "population": 544829,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "比拉斯普尔",
+      "lon": 82.15999,
+      "lat": 22.09042,
+      "tier": 2,
+      "population": 543454,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "萨戈达",
+      "lon": 72.67499,
+      "lat": 32.08537,
+      "tier": 2,
+      "population": 542603,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "蒂鲁内尔维利",
+      "lon": 77.68998,
+      "lat": 8.73041,
+      "tier": 2,
+      "population": 542200,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新库兹涅茨克",
+      "lon": 87.11498,
+      "lat": 53.75001,
+      "tier": 2,
+      "population": 539616,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "大津",
+      "lon": 135.86741,
+      "lat": 35.0064,
+      "tier": 2,
+      "population": 536976,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "松山",
+      "lon": 132.76584,
+      "lat": 33.84554,
+      "tier": 2,
+      "population": 533541,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "贡土尔",
+      "lon": 80.45001,
+      "lat": 16.33,
+      "tier": 2,
+      "population": 530577,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "亚庇",
+      "lon": 116.11001,
+      "lat": 5.97998,
+      "tier": 2,
+      "population": 527671,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "秋明",
+      "lon": 65.52999,
+      "lat": 57.14001,
+      "tier": 2,
+      "population": 519119,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "西里古里",
+      "lon": 88.455,
+      "lat": 26.72042,
+      "tier": 2,
+      "population": 515574,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "班達亞齊",
+      "lon": 95.32001,
+      "lat": 5.54998,
+      "tier": 2,
+      "population": 513698,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "邬阇衍那",
+      "lon": 75.79004,
+      "lat": 23.1904,
+      "tier": 2,
+      "population": 513350,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "武吉丁宜",
+      "lon": 100.36146,
+      "lat": -0.30315,
+      "tier": 2,
+      "population": 506964,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "哥打巴鲁",
+      "lon": 102.22998,
+      "lat": 6.11997,
+      "tier": 2,
+      "population": 505583,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "达凡基尔",
+      "lon": 75.92001,
+      "lat": 14.47001,
+      "tier": 2,
+      "population": 503564,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿科拉",
+      "lon": 77.01002,
+      "lat": 20.70999,
+      "tier": 2,
+      "population": 503502,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "津",
+      "lon": 136.51667,
+      "lat": 34.71707,
+      "tier": 2,
+      "population": 500000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "太原",
+      "lon": 105.83002,
+      "lat": 21.59996,
+      "tier": 2,
+      "population": 500000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "沙赫里薩布茲",
+      "lon": 66.83147,
+      "lat": 39.06179,
+      "tier": 2,
+      "population": 498545,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "萨哈兰普尔",
+      "lon": 77.55004,
+      "lat": 29.97002,
+      "tier": 2,
+      "population": 484873,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "古巴尔嘎",
+      "lon": 76.82,
+      "lat": 17.34996,
+      "tier": 2,
+      "population": 483615,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "赫拉特",
+      "lon": 62.16999,
+      "lat": 34.33001,
+      "tier": 2,
+      "population": 481009,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克麦罗沃",
+      "lon": 86.08998,
+      "lat": 55.33997,
+      "tier": 2,
+      "population": 477090,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "希姆肯特",
+      "lon": 69.59502,
+      "lat": 42.32001,
+      "tier": 2,
+      "population": 465392,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿巴斯港",
+      "lon": 56.27214,
+      "lat": 27.20406,
+      "tier": 2,
+      "population": 461499,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马扎里沙里夫",
+      "lon": 67.10003,
+      "lat": 36.69999,
+      "tier": 2,
+      "population": 458151,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "占碑",
+      "lon": 103.61005,
+      "lat": -1.59,
+      "tier": 2,
+      "population": 457090,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "万鸦老",
+      "lon": 124.84999,
+      "lat": 1.48002,
+      "tier": 2,
+      "population": 451893,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "碧瑶",
+      "lon": 120.56994,
+      "lat": 16.42999,
+      "tier": 2,
+      "population": 447824,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴厘巴板",
+      "lon": 116.83002,
+      "lat": -1.25002,
+      "tier": 2,
+      "population": 445905,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "明古魯",
+      "lon": 102.26997,
+      "lat": -3.80004,
+      "tier": 2,
+      "population": 426673,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马格尼托哥尔斯克",
+      "lon": 58.98001,
+      "lat": 53.42269,
+      "tier": 2,
+      "population": 413351,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "艾因",
+      "lon": 55.74,
+      "lat": 24.23047,
+      "tier": 2,
+      "population": 408733,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "苏尔古特",
+      "lon": 73.42502,
+      "lat": 61.25994,
+      "tier": 2,
+      "population": 400000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "卡尔希",
+      "lon": 65.8,
+      "lat": 38.87043,
+      "tier": 2,
+      "population": 386361,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "下塔吉尔",
+      "lon": 59.97498,
+      "lat": 57.92002,
+      "tier": 2,
+      "population": 381116,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "哥倫打洛",
+      "lon": 123.07005,
+      "lat": 0.54998,
+      "tier": 2,
+      "population": 365497,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "拉尔卡纳",
+      "lon": 68.20678,
+      "lat": 27.56177,
+      "tier": 2,
+      "population": 364033,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "帕格尔布尔",
+      "lon": 86.98,
+      "lat": 25.23,
+      "tier": 2,
+      "population": 361548,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "乌兰乌德",
+      "lon": 107.625,
+      "lat": 51.82499,
+      "tier": 2,
+      "population": 360278,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "塔拉兹",
+      "lon": 71.36499,
+      "lat": 42.89998,
+      "tier": 2,
+      "population": 358153,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "旭川",
+      "lon": 142.37998,
+      "lat": 43.75502,
+      "tier": 2,
+      "population": 356612,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "安汶",
+      "lon": 128.20002,
+      "lat": -3.71669,
+      "tier": 2,
+      "population": 355596,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "库尔干",
+      "lon": 65.34499,
+      "lat": 55.45996,
+      "tier": 2,
+      "population": 343129,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "高知",
+      "lon": 133.53752,
+      "lat": 33.56243,
+      "tier": 2,
+      "population": 335570,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "那空叻差是玛",
+      "lon": 102.10001,
+      "lat": 15.00003,
+      "tier": 2,
+      "population": 334984,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "元山",
+      "lon": 127.43082,
+      "lat": 39.16049,
+      "tier": 2,
+      "population": 329207,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴甫洛达尔",
+      "lon": 76.95002,
+      "lat": 52.3,
+      "tier": 2,
+      "population": 329002,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "比尔詹德",
+      "lon": 59.21994,
+      "lat": 32.88002,
+      "tier": 2,
+      "population": 324703,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "宫崎",
+      "lon": 131.41838,
+      "lat": 31.91824,
+      "tier": 2,
+      "population": 324384,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "布哈拉",
+      "lon": 64.43001,
+      "lat": 39.78001,
+      "tier": 2,
+      "population": 319476,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "厄斯克门",
+      "lon": 82.61495,
+      "lat": 49.99003,
+      "tier": 2,
+      "population": 319067,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "塞米伊",
+      "lon": 80.27504,
+      "lat": 50.435,
+      "tier": 2,
+      "population": 311353,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "函馆",
+      "lon": 140.73998,
+      "lat": 41.79498,
+      "tier": 2,
+      "population": 302984,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克孜勒奥尔达",
+      "lon": 65.46499,
+      "lat": 44.80002,
+      "tier": 2,
+      "population": 300000,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "新义州",
+      "lon": 124.42128,
+      "lat": 40.08586,
+      "tier": 2,
+      "population": 288112,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马杰内",
+      "lon": 118.96601,
+      "lat": -3.5336,
+      "tier": 2,
+      "population": 272377,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "斯捷尔利塔马克",
+      "lon": 55.96004,
+      "lat": 53.62999,
+      "tier": 2,
+      "population": 267231,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴東石林潘",
+      "lon": 99.27336,
+      "lat": 1.38874,
+      "tier": 2,
+      "population": 266882,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿克托比",
+      "lon": 57.16999,
+      "lat": 50.28002,
+      "tier": 2,
+      "population": 262457,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "安加尔斯克",
+      "lon": 103.92,
+      "lat": 52.56001,
+      "tier": 2,
+      "population": 243158,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "本地治里",
+      "lon": 79.83,
+      "lat": 11.93499,
+      "tier": 2,
+      "population": 227411,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "海兰泡",
+      "lon": 127.53334,
+      "lat": 50.26661,
+      "tier": 2,
+      "population": 221296,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "拉瓦格",
+      "lon": 120.59361,
+      "lat": 18.19885,
+      "tier": 2,
+      "population": 207048,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "实兑",
+      "lon": 92.88,
+      "lat": 20.14,
+      "tier": 2,
+      "population": 179032,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "阿巴坎",
+      "lon": 91.445,
+      "lat": 53.70369,
+      "tier": 2,
+      "population": 167289,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "素叻他尼",
+      "lon": 99.34013,
+      "lat": 9.1501,
+      "tier": 2,
+      "population": 157627,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "马德望",
+      "lon": 103.20005,
+      "lat": 13.10001,
+      "tier": 2,
+      "population": 154773,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "埃基巴斯图兹",
+      "lon": 75.31994,
+      "lat": 51.72998,
+      "tier": 2,
+      "population": 127868,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "斯里贾亚瓦德纳普拉科特",
+      "lon": 79.94999,
+      "lat": 6.9,
+      "tier": 2,
+      "population": 115826,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "康提",
+      "lon": 80.67,
+      "lat": 7.27998,
+      "tier": 2,
+      "population": 111701,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "暹粒",
+      "lon": 103.85003,
+      "lat": 13.36664,
+      "tier": 2,
+      "population": 109398,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "克孜勒",
+      "lon": 94.38307,
+      "lat": 51.7067,
+      "tier": 2,
+      "population": 108240,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "酒田",
+      "lon": 139.85006,
+      "lat": 38.92004,
+      "tier": 2,
+      "population": 100446,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "布城",
+      "lon": 101.69504,
+      "lat": 2.93251,
+      "tier": 2,
+      "population": 67964,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "乔巴山",
+      "lon": 114.50602,
+      "lat": 48.06659,
+      "tier": 2,
+      "population": 33376,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "莱镇",
+      "lon": 77.57229,
+      "lat": 34.16156,
+      "tier": 2,
+      "population": 30870,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "科布多城",
+      "lon": 91.63326,
+      "lat": 48.01664,
+      "tier": 2,
+      "population": 30500,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "第斯普尔",
+      "lon": 91.76664,
+      "lat": 26.14402,
+      "tier": 2,
+      "population": 16140,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "达兰扎德嘎德",
+      "lon": 104.44028,
+      "lat": 43.58355,
+      "tier": 2,
+      "population": 15093,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "达利涅戈尔斯克",
+      "lon": 135.51725,
+      "lat": 44.53722,
+      "tier": 2,
+      "population": 8123,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "布卡恰恰",
+      "lon": 116.91662,
+      "lat": 52.98334,
+      "tier": 2,
+      "population": 3372,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "芽庄",
+      "lon": 109.17002,
+      "lat": 12.25004,
+      "tier": 3,
+      "population": 411556,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "济州",
+      "lon": 126.52193,
+      "lat": 33.51014,
+      "tier": 3,
+      "population": 408364,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "黎牙实比",
+      "lon": 123.75001,
+      "lat": 13.16998,
+      "tier": 3,
+      "population": 320081,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "孔敬",
+      "lon": 102.83004,
+      "lat": 16.42004,
+      "tier": 3,
+      "population": 251056,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "乌隆他尼",
+      "lon": 102.78932,
+      "lat": 17.40476,
+      "tier": 3,
+      "population": 247231,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "琅勃拉邦",
+      "lon": 102.14161,
+      "lat": 19.88453,
+      "tier": 4,
+      "population": 107142,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "巴色",
+      "lon": 105.81834,
+      "lat": 15.12206,
+      "tier": 4,
+      "population": 102775,
+      "priority": false,
+      "domestic": false
+    },
+    {
+      "name": "三亚",
+      "lon": 109.50403,
+      "lat": 18.2591,
+      "tier": 3,
+      "population": 362689,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "丽江",
+      "lon": 100.26658,
+      "lat": 26.8,
+      "tier": 3,
+      "population": 18445,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "大理",
+      "lon": 100.25032,
+      "lat": 25.59373,
+      "tier": 3,
+      "population": 156685,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "文山",
+      "lon": 104.2497,
+      "lat": 23.37236,
+      "tier": 3,
+      "population": 152388,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "玉溪",
+      "lon": 102.57001,
+      "lat": 24.38,
+      "tier": 3,
+      "population": 396325,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "西昌",
+      "lon": 102.3,
+      "lat": 27.88002,
+      "tier": 2,
+      "population": 379993,
+      "priority": true,
+      "domestic": true
+    },
+    {
+      "name": "钦州",
+      "lon": 108.61997,
+      "lat": 21.95043,
+      "tier": 3,
+      "population": 245376,
+      "priority": true,
+      "domestic": true
+    }
+  ]
+}

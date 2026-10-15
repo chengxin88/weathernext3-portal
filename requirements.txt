@@ -1,0 +1,8 @@
+# Tested package versions from the running WSL environment on 2026-10-15.
+numpy==2.5.3
+pandas==3.0.6
+matplotlib==3.11.2
+shapely==2.1.2
+cartopy==0.26.0
+requests==2.34.2
+zarr==3.4.0

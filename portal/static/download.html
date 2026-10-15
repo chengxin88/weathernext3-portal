@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeatherNext 3 数据下载</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3f6fb; color: #24334b; font: 15px/1.6 "Microsoft YaHei", sans-serif; }
+main { max-width: 1050px; margin: 28px auto; padding: 0 18px 40px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+h1 { margin: 0; font-size: 25px; } h2 { margin: 0 0 12px; font-size: 18px; }
+a { color: #1756a4; } .muted { color: #60718b; font-size: 13px; }
+.panel { background: white; border: 1px solid #dae3ef; border-radius: 10px; padding: 20px; margin-top: 18px; }
+.controls { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: end; }
+.controls label { display: grid; gap: 5px; }
+select, input[type=number], button { font: inherit; padding: 7px 10px; border: 1px solid #b9c8db; border-radius: 5px; background: white; }
+input[type=number] { width: 100px; } button { cursor: pointer; color: #1756a4; }
+#fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 9px; margin-top: 14px; }
+.field { border: 1px solid #e1e8f1; border-radius: 5px; padding: 9px; cursor: pointer; display: flex; gap: 8px; align-items: flex-start; }
+.field input { margin-top: 6px; } .field small { display: block; color: #708099; }
+.field.off { opacity: .55; } .action { display: inline-block; background: #195da9; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 12px; }
+.action[aria-disabled=true] { opacity: .45; pointer-events: none; } .error { color: #b32832; }
+.toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+td, th { padding: 8px 5px; border-bottom: 1px solid #e6edf5; text-align: left; } th { color: #60718b; }
+.table-wrap { overflow-x: auto; } #pagination { display: flex; gap: 12px; justify-content: center; align-items: center; margin-top: 15px; }
+code { background: #edf2f8; padding: 2px 5px; border-radius: 3px; }
+details { margin-top: 12px; } pre { overflow-x: auto; background: #edf2f8; padding: 14px; font-size: 12px; }
+@media(max-width:600px) { main { margin-top: 18px; padding: 0 12px 30px; } header { align-items: flex-start; } h1 { font-size: 21px; } .panel { padding: 15px; } select { max-width: 100%; } }
+</style>
+</head>
+<body>
+<main>
+<header><div><h1>WeatherNext 3 数据下载</h1><div class="muted">Google DeepMind · 区域原生网格 · 集合均值</div></div><a href="../">返回预报图</a></header>
+<section class="panel">
+<h2>新疆风电项目百米风速下载</h2>
+<p>巴里坤3 · 55 台风机及 1 个风场站点 · 2026 年 3 月 14 日至 8 月 23 日历史起报。</p>
+<p class="muted">每小时起报，原生 100 米 U/V、点位风速和风向。按天打包 CSV，并提供下载进度、原生网格和来源清单。</p>
+<a class="action" href="xinjiang-wind/">进入新疆风电项目下载</a>
+</section>
+<section class="panel">
+<div class="controls">
+<label>起报时间（北京时间）<select id="run" aria-label="起报时间"></select></label>
+<label>开始时效（小时）<input id="start" type="number" min="1" max="360" value="1"></label>
+<label>结束时效（小时）<input id="end" type="number" min="1" max="360" value="48"></label>
+<button id="refresh">刷新目录</button>
+</div>
+<p id="coverage" class="muted">正在读取本机已发布资料……</p>
+<div class="toolbar"><h2>选择变量</h2><div><button id="all">全选可用变量</button> <button id="core">仅常用地面变量</button></div></div>
+<div id="fields"></div>
+</section>
+<section class="panel" aria-live="polite">
+<h2>下载所选数据</h2>
+<div id="summary">正在读取目录……</div>
+<div id="missing" class="muted"></div>
+<a id="bundle" class="action" aria-disabled="true">下载 ZIP 数据包</a>
+<p class="muted">仅下载本机已有缓存。正在更新的起报只包含已发布时效，缺失项会写入数据包清单。ZIP 中途断开后需重新下载；下方单个 NPZ 文件支持断点续传。</p>
+</section>
+<section class="panel">
+<h2>单个网格文件</h2>
+<div class="table-wrap"><table><thead><tr><th>时效 / 有效时间（北京时间）</th><th>变量</th><th>大小</th><th>下载</th></tr></thead><tbody id="files"></tbody></table></div>
+<div id="pagination"><button id="prev">上一页</button><span id="page"></span><button id="next">下一页</button></div>
+</section>
+<section class="panel">
+<h2>数据格式</h2>
+<p>每个 <code>.npz</code> 文件包含经度 <code>lon</code>、纬度 <code>lat</code>、二维格点 <code>values</code> 和 JSON 元数据 <code>meta</code>。气象站训练温露点为 0.05° 网格，其余变量为 0.1° 网格；覆盖范围以所选起报为准。</p>
+<p class="muted">这是区域集合均值资料。降水为逐小时累计量，温度单位 °C、气压 hPa、风分量 m/s、云量 %、辐射 W/m²。ZIP 附带 manifest.json 和读取说明。</p>
+<details><summary>Python 读取示例</summary><pre>import json
+import numpy as np
+
+with np.load("data/f001_surface_t.npz", allow_pickle=False) as data:
+    lon, lat, values = data["lon"], data["lat"], data["values"]
+    meta = json.loads(str(data["meta"].item()))
+    print(values.shape, meta["valid"], meta["unit"])</pre></details>
+<p class="muted">下载期间需保持源电脑、WSL 服务和网站连接运行。入口沿用本站登录。</p>
+</section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const coreFields = new Set(['surface_u','surface_v','surface_t','surface_td','surface_msl','rain1h']);
+let catalog, manifest, page = 0, timer, requestController, requestVersion = 0;
+const pageSize = 50;
+const api = name => '../api/' + name;
+function size(bytes) { return bytes >= 1024**3 ? (bytes/1024**3).toFixed(2)+' GiB' : bytes >= 1024**2 ? (bytes/1024**2).toFixed(1)+' MiB' : (bytes/1024).toFixed(1)+' KiB'; }
+function runInfo() { return catalog.runs.find(r => r.id === $('run').value); }
+function selectedFields() { return [...$('fields').querySelectorAll('input:checked')].map(i => i.value); }
+function disableDownload() { $('bundle').removeAttribute('href'); $('bundle').setAttribute('aria-disabled','true'); }
+function schedule() { requestVersion++; requestController?.abort(); clearTimeout(timer); disableDownload(); $('summary').textContent = '正在整理所选数据……'; timer = setTimeout(preview, 350); }
+function drawFields(previous) {
+  const run = runInfo(); $('fields').replaceChildren();
+  for (const field of catalog.fields) {
+    const leads = run.field_leads[field.id] || [];
+    const label = document.createElement('label'); label.className = 'field' + (leads.length ? '' : ' off');
+    const input = document.createElement('input'); input.type = 'checkbox'; input.value = field.id;
+    input.disabled = !leads.length; input.checked = !!leads.length && (!previous || previous.has(field.id)); input.addEventListener('change', schedule);
+    const text = document.createElement('span'); text.textContent = field.label;
+    const note = document.createElement('small'); note.textContent = `${field.unit} · ${field.grid_degrees}° · ${leads.length} 个时效`;
+    text.append(note); label.append(input,text); $('fields').append(label);
+  }
+}
+function changeRun(reset=true, previous=null) {
+  const r = runInfo(), max = Math.max(...r.leads);
+  if (reset) { $('start').value = Math.min(...r.leads); $('end').value = max; }
+  const [w,s,e,n] = r.bounds;
+  $('coverage').textContent = `覆盖 ${w}–${e}°E、${s}–${n}°N · 已发布 ${r.leads.length}/${r.forecast_horizon_hours} 个时效 · ${r.status==='complete'?'已完整发布':'正在更新'}`;
+  history.replaceState(null,'','?'+new URLSearchParams({run:r.id}));
+  drawFields(previous); schedule();
+}
+async function refresh() {
+  $('refresh').disabled = true;
+  const chosen = $('run').value || new URLSearchParams(location.search).get('run');
+  const previous = catalog ? new Set(selectedFields()) : null;
+  try {
+    const response = await fetch(api('download-catalog'), {cache:'no-store',signal:AbortSignal.timeout(20000)});
+    if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) throw new Error('目录读取失败，请确认已登录后刷新页面。');
+    catalog = await response.json();
+    if (!catalog.runs.length) throw new Error('暂无已发布数据');
+    $('run').replaceChildren();
+    for (const r of catalog.runs) { const o = document.createElement('option'); o.value = r.id; o.textContent = `${r.run_bjt} · ${r.leads.length}/${r.forecast_horizon_hours}h${r.status==='partial'?'（更新中）':''}`; $('run').append(o); }
+    if (catalog.runs.some(r=>r.id===chosen)) $('run').value = chosen;
+    changeRun(!manifest || chosen !== $('run').value, previous);
+  } catch (error) { $('summary').className='error'; $('summary').textContent=error.message; disableDownload(); }
+  finally { $('refresh').disabled = false; }
+}
+async function preview() {
+  const fields = selectedFields(), version = ++requestVersion;
+  requestController?.abort(); requestController = new AbortController(); manifest = null; $('files').replaceChildren(); $('page').textContent=''; $('missing').textContent='';
+  if (!fields.length) { $('summary').textContent='请至少选择一个变量。'; return; }
+  const query = new URLSearchParams({run:$('run').value,start:$('start').value,end:$('end').value,fields:fields.join(',')});
+  try {
+    const response = await fetch(api('download-manifest')+'?'+query, {cache:'no-store',signal:requestController.signal});
+    if (!response.headers.get('content-type')?.includes('application/json')) throw new Error('登录可能已过期，请重新登录后刷新页面。');
+    const data = await response.json(); if (!response.ok) throw new Error(data.error || '数据清单读取失败');
+    if (version !== requestVersion) return;
+    manifest = data; page = 0; $('summary').className='';
+    $('summary').textContent = `${data.file_count} 个网格文件，数据大小 ${size(data.total_bytes)}，时效 +${data.start} 至 +${data.end} 小时。`;
+    const missingCount = data.missing.reduce((n,f)=>n+f.leads.length,0);
+    $('missing').textContent = missingCount ? `所选范围有 ${missingCount} 个变量/时效组合尚未发布，下载包包含当前可用文件。可稍后刷新目录再下载。` : '所选变量和时效均已发布。';
+    query.set('snapshot',data.snapshot); $('bundle').href='bundle.zip?'+query; $('bundle').setAttribute('aria-disabled','false'); drawFiles();
+  } catch(error) { if (error.name==='AbortError' || version!==requestVersion) return; $('summary').className='error'; $('summary').textContent=error.message; disableDownload(); }
+}
+function drawFiles() {
+  $('files').replaceChildren(); if (!manifest) return;
+  const labels = new Map(catalog.fields.map(f=>[f.id,f.label]));
+  for(const f of manifest.files.slice(page*pageSize,(page+1)*pageSize)) {
+    const row = document.createElement('tr');
+    const time = new Date(Date.parse(manifest.run_utc)+f.lead*3600000).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
+    for(const value of [`+${f.lead}h / ${time}`,labels.get(f.field),size(f.bytes)]) {const cell=document.createElement('td');cell.textContent=value;row.append(cell);}
+    const cell=document.createElement('td'),link=document.createElement('a');link.href=f.url;link.textContent='NPZ';cell.append(link);row.append(cell);$('files').append(row);
+  }
+  const count=Math.ceil(manifest.files.length/pageSize);$('page').textContent=`${page+1} / ${count}`;$('prev').disabled=page===0;$('next').disabled=page>=count-1;
+}
+$('run').addEventListener('change',()=>changeRun());
+for(const id of ['start','end']) $(id).addEventListener('input',schedule);
+$('refresh').addEventListener('click',refresh);
+$('all').addEventListener('click',()=>{for(const i of $('fields').querySelectorAll('input'))i.checked=!i.disabled;schedule();});
+$('core').addEventListener('click',()=>{for(const i of $('fields').querySelectorAll('input'))i.checked=!i.disabled&&coreFields.has(i.value);schedule();});
+$('prev').addEventListener('click',()=>{page--;drawFiles();});$('next').addEventListener('click',()=>{page++;drawFiles();});
+refresh();
+</script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeatherNext 3 产品显示平台</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 13px/1.4 "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; color: #222; background: #fff; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { background: linear-gradient(#6f97c9, #4f7bb5); color: #fff; padding: 10px 14px 0; }
+  header h1 { margin: 0 0 8px; font-size: 18px; letter-spacing: 1px; }
+  header h1 small { font-size: 12px; font-weight: normal; opacity: .85; margin-left: 8px; }
+  .systems { display: flex; gap: 2px; }
+  .systems span { padding: 5px 14px; font-size: 12px; text-align: center; }
+  .systems .on { background: #1d4f99; border-radius: 3px 3px 0 0; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 3px; padding: 4px 4px 0; background: #fff; }
+  .tabs button { flex: 1 1 0; min-width: 70px; padding: 4px 2px; border: 1px solid #e3c9a3; background: #fdebd2; color: #333; font-size: 12px; cursor: pointer; }
+  .tabs button.on { background: #f6c27c; font-weight: bold; }
+  .subtabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 4px 2px; }
+  .subtabs button { padding: 2px 10px; border: 1px solid #c8d3e6; background: #f3f6fb; font-size: 12px; cursor: pointer; border-radius: 2px; }
+  .subtabs button.on { background: #1d4f99; color: #fff; border-color: #1d4f99; }
+  .subtabs[hidden] { display: none; }
+  .subtabs .title { align-self: center; margin-right: 4px; font-size: 12px; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 6px 4px; font-size: 12px; }
+  .bar select, .bar button { font-size: 12px; }
+  .bar .arrow { padding: 0 5px; cursor: pointer; }
+  .bar label { white-space: nowrap; cursor: pointer; }
+  .play { padding: 2px 10px; border: 1px solid #9ab; background: #eef3fa; cursor: pointer; }
+  .leads { display: flex; flex-wrap: wrap; align-items: center; gap: 1px; padding: 2px 4px 6px; font-size: 11px; }
+  .leads .title { margin-right: 6px; white-space: nowrap; }
+  .leads .hint { color: #777; margin-left: 4px; font-weight: normal; }
+  .leads a { min-width: 21px; padding: 1px 2px; text-align: center; color: #333; text-decoration: none; cursor: pointer; }
+  .leads a:hover { background: #e6eef9; }
+  .leads a.on { background: #f6c27c; font-weight: bold; }
+  .leads a.off { color: #bbb; pointer-events: none; }
+  .map { position: relative; min-height: 300px; text-align: center; }
+  .map img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .map .msg { position: absolute; inset: 40% 0 auto; color: #666; }
+  .map.loading img { opacity: .55; }
+  footer { text-align: center; color: #777; font-size: 11px; padding: 10px 4px 20px; }
+  .download-note { margin: 6px 8px; color: #555; font-size: 11px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>WeatherNext 3 全球AI集合预报 — 产品显示平台<small id="map-resolution">Google DeepMind · 集合均值 · 原生分辨率约 5 km / 10 km</small></h1>
+    <div class="systems"><span class="on">地面要素预报<br>(WN3-Surface)</span><span>高空要素<br>(未接入)</span></div>
+  </header>
+  <nav class="tabs" id="groups"></nav>
+  <nav class="subtabs" id="rain-source" aria-label="降水来源" hidden></nav>
+  <nav class="subtabs" id="products"></nav>
+  <div class="bar">
+    <span>起报时间(BJT)：
+      <span class="arrow" id="runPrev" title="更早起报">◀</span><select id="run"></select><span class="arrow" id="runNext" title="更新起报">▶</span>
+    </span>
+    <span id="regions">区域：</span>
+    <label id="rainValuesControl"><input type="checkbox" id="rainValues" checked>降水数值（mm）</label>
+    <button class="play" id="play">▶ 播放</button>
+    <a id="dataDownload" href="download/" style="color:#1756a4">下载原始网格数据</a>
+  </div>
+  <div class="download-note" id="download-note" hidden></div>
+  <div class="leads" id="leads"></div>
+  <div class="map" id="map"><img id="img" alt=""><div class="msg" id="msg">正在读取资料目录……</div></div>
+  <footer id="source-note">资料：Google DeepMind WeatherNext 3 集合均值。</footer>
+</div>
+<script>
+const RAIN_SOURCES = [["", "常规降水预报"], ["imerg_", "IMERG降水预报"], ["experimental_", "PARDIG降水预报（试验）"]];
+const RAIN_HOURS = [1, 3, 6, 12, 24];
+const GROUPS = [
+  ["降水", RAIN_SOURCES.flatMap(([prefix]) => RAIN_HOURS.map(hours => `${prefix}rain${hours}`))],
+  ["地面要素", ["t2m", "td2m", "rh2m", "dt24"]],
+  ["风场", ["wind10", "wind100"]],
+  ["形势场", ["mslp"]],
+  ["云量", ["cloud_total", "cloud_high", "cloud_medium", "cloud_low"]],
+  ["太阳辐射", ["solar_downwards", "solar_direct"]],
+];
+const state = { run: null, lead: 1, product: "rain1", region: "south", rainValues: true, timer: null };
+let catalog = null;
+let leadListKey = "", controlListKey = "", hoverTimer = null, refreshingCatalog = false;
+let desiredMapUrl = "", loadingImage = null;
+const readyImages = new Map(), failedImages = new Set();
+const IMAGE_CACHE_LIMIT = 48;
+const $ = id => document.getElementById(id);
+
+function isRain(product) { return /^(?:(?:imerg|experimental)_)?rain\d+$/.test(product); }
+function minLead(product) {
+  if (isRain(product)) return Number(product.match(/rain(\d+)$/)[1]);
+  return product === "dt24" ? 25 : 1;
+}
+function runInfo() { return catalog.runs.find(r => r.id === state.run); }
+function validLeads() {
+  const available = new Set(runInfo().leads), m = minLead(state.product);
+  const optional = /^(imerg_|experimental_|cloud_|solar_)/.test(state.product);
+  const productLeads = optional ? (runInfo().optional_product_leads?.[state.product] ?? []) :
+    state.product === "wind100" ? (runInfo().wind100_leads ?? []) : runInfo().leads;
+  return productLeads.filter(lead => available.has(lead) && lead >= m &&
+    (state.product === "dt24" ? available.has(lead - 24) :
+     !isRain(state.product) || Array.from({length: m}, (_, i) => lead - i).every(l => available.has(l))));
+}
+
+function readHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  for (const k of ["run", "product", "region"]) if (p.get(k)) state[k] = p.get(k);
+  if (p.get("lead")) state.lead = Number(p.get("lead"));
+  if (p.has("values")) state.rainValues = p.get("values") !== "0";
+}
+function writeHash() {
+  history.replaceState(null, "", "#" + new URLSearchParams({run: state.run, lead: state.lead, product: state.product, region: state.region, values: Number(state.rainValues)}));
+}
+
+function rainSourcePrefix(product = state.product) {
+  return product.startsWith("imerg_") ? "imerg_" : product.startsWith("experimental_") ? "experimental_" : "";
+}
+function productLabel(product = state.product) {
+  if (!isRain(product)) return catalog.products[product];
+  const source = RAIN_SOURCES.find(([prefix]) => prefix === rainSourcePrefix(product))[1];
+  return `${source} · ${minLead(product)}小时累计降水`;
+}
+function selectRainSource(prefix) {
+  const hours = isRain(state.product) ? minLead(state.product) : 1;
+  state.product = `${prefix}rain${hours}`;
+  update();
+}
+
+function drawGroups() {
+  $("groups").innerHTML = "";
+  for (const [name, items] of GROUPS) {
+    const b = document.createElement("button");
+    b.textContent = name;
+    b.className = items.includes(state.product) ? "on" : "";
+    b.onclick = () => { state.product = items[0]; update(); };
+    $("groups").append(b);
+  }
+  const sourceBox = $("rain-source");
+  sourceBox.innerHTML = "";
+  sourceBox.hidden = !isRain(state.product);
+  let items = GROUPS.find(g => g[1].includes(state.product))[1];
+  if (isRain(state.product)) {
+    const prefix = rainSourcePrefix();
+    const title = document.createElement("span");
+    title.textContent = "降水来源：";
+    title.className = "title";
+    sourceBox.append(title);
+    for (const [value, name] of RAIN_SOURCES) {
+      const b = document.createElement("button");
+      b.textContent = name;
+      b.className = value === prefix ? "on" : "";
+      b.setAttribute("aria-pressed", String(value === prefix));
+      b.onclick = () => selectRainSource(value);
+      sourceBox.append(b);
+    }
+    items = RAIN_HOURS.map(hours => `${prefix}rain${hours}`);
+  }
+  $("products").innerHTML = "";
+  for (const key of items) {
+    const b = document.createElement("button");
+    b.textContent = isRain(key) ? `${minLead(key)}小时累计降水` : catalog.products[key];
+    b.className = key === state.product ? "on" : "";
+    b.onclick = () => { state.product = key; update(); };
+    $("products").append(b);
+  }
+}
+
+function drawRegions() {
+  const box = $("regions");
+  box.innerHTML = "区域：";
+  for (const [key, name] of Object.entries(catalog.regions)) {
+    if (!runInfo().regions.includes(key)) continue;
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="region" value="${key}"${key === state.region ? " checked" : ""}>${name}`;
+    label.querySelector("input").onchange = () => { state.region = key; update(); };
+    box.append(label, " ");
+  }
+}
+
+function drawRuns() {
+  $("run").innerHTML = catalog.runs.map(r => `<option value="${r.id}">${r.run_bjt} · ${r.status === "partial" ? `已下载 ${r.leads.length}/` : ""}${r.forecast_horizon_hours ?? Math.max(...r.leads)}h</option>`).join("");
+  $("run").value = state.run;
+}
+
+function drawDownloadNote() {
+  const partial = catalog.runs.filter(r => r.status === "partial");
+  const shown = new Set(partial.map(r => r.id));
+  const notes = partial.map(r => `${r.run_bjt} 起报：已下载 ${r.leads.length}/${r.forecast_horizon_hours}h`);
+  for (const run of catalog.backfill_queue ?? []) {
+    if (run.status === "complete" || shown.has(run.id)) continue;
+    const label = run.status === "running" ? "正在准备下载" :
+                  run.status === "waiting_budget" ? "等待次日流量额度" :
+                  run.status === "waiting_hourly" ? "优先保障逐小时更新" :
+                  run.status === "waiting_source" ? "等待完整源资料" :
+                  run.status === "trial_expired" ? "试运行已结束，补下载暂停" :
+                  run.status === "trial_limit" ? "已达到试运行流量限额" :
+                  run.status === "paused" ? "补下载已暂停" :
+                  run.status === "error" ? "下载重试中" : "排队补下载";
+    notes.push(`${run.run_bjt} 起报：${label}`);
+  }
+  $("download-note").hidden = !notes.length;
+  $("download-note").textContent = notes.join("；") + (notes.length ? "。每 15 秒更新，已下载的时次可直接查看。" : "");
+}
+
+function drawLeads() {
+  const info = runInfo(), ok = new Set(validLeads());
+  const last = info.forecast_horizon_hours ?? Math.max(...info.leads);
+  const key = `${info.id}|${state.product}|${last}`;
+  if (key !== leadListKey) {
+    clearTimeout(hoverTimer);
+    leadListKey = key;
+    let html = '<span class="title">预报时效(hr)：<span class="hint">悬停切换</span></span>';
+    for (let l = 1; l <= last; l++) {
+      const valid = new Date(Date.parse(info.run_utc) + (l + 8) * 3600000).toISOString().slice(5, 16).replace("T", " ");
+      html += `<a data-lead="${l}" role="button" tabindex="${ok.has(l) ? 0 : -1}" title="北京时间 ${valid} · +${l} 小时" class="${ok.has(l) ? "" : "off"}">${l}</a>`;
+    }
+    $("leads").innerHTML = html;
+    $("leads").querySelectorAll("a[data-lead]").forEach(a => {
+      const lead = Number(a.dataset.lead);
+      const choose = () => {
+        clearTimeout(hoverTimer);
+        if (!validLeads().includes(lead)) return;
+        stopPlay();
+        if (state.lead !== lead) { state.lead = lead; update(); }
+      };
+      a.onclick = choose;
+      a.onpointerenter = event => {
+        if (event.pointerType === "touch" || !validLeads().includes(lead)) return;
+        clearTimeout(hoverTimer);
+        hoverTimer = setTimeout(choose, 100);
+      };
+      a.onpointerleave = () => clearTimeout(hoverTimer);
+      a.onfocus = choose;
+      a.onkeydown = event => {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); choose(); }
+      };
+    });
+  }
+  $("leads").querySelectorAll("a[data-lead]").forEach(a => {
+    const selected = Number(a.dataset.lead) === state.lead;
+    const available = ok.has(Number(a.dataset.lead));
+    a.classList.toggle("off", !available);
+    a.tabIndex = available ? 0 : -1;
+    a.classList.toggle("on", selected);
+    a.setAttribute("aria-pressed", String(selected));
+    a.setAttribute("aria-disabled", String(!ok.has(Number(a.dataset.lead))));
+  });
+}
+
+function imageUrl(lead) {
+  return "api/map.png?" + new URLSearchParams({run: state.run, lead, product: state.product, region: state.region, values: Number(state.rainValues), v: catalog.map_version, titles: isRain(state.product) ? "rain2" : ""});
+}
+
+function showMapImage(url) {
+  if (url !== desiredMapUrl) return;
+  $("img").src = url;
+  $("img").alt = `${productLabel()} · +${state.lead} 小时 · ${catalog.regions[state.region]}`;
+  $("map").classList.remove("loading");
+  $("msg").textContent = "";
+  const image = readyImages.get(url);
+  readyImages.delete(url); readyImages.set(url, image);
+}
+
+function adjacentMapUrls() {
+  const leads = validLeads(), i = leads.indexOf(state.lead);
+  return [leads[i + 1], leads[i - 1]].filter(lead => lead !== undefined).map(imageUrl);
+}
+
+function loadNextMap() {
+  if (loadingImage) return;
+  const urls = [desiredMapUrl, ...adjacentMapUrls()];
+  const url = urls.find(candidate => candidate && !readyImages.has(candidate) && !failedImages.has(candidate));
+  if (!url) return;
+  const probe = new Image();
+  loadingImage = probe;
+  probe.onload = () => {
+    loadingImage = null;
+    readyImages.set(url, probe);
+    while (readyImages.size > IMAGE_CACHE_LIMIT) readyImages.delete(readyImages.keys().next().value);
+    showMapImage(url);
+    loadNextMap();
+  };
+  probe.onerror = () => {
+    loadingImage = null;
+    failedImages.add(url);
+    if (url === desiredMapUrl) {
+      $("map").classList.remove("loading");
+      $("img").removeAttribute("src");
+      $("msg").textContent = "图像生成失败";
+      fetch(url).then(response => response.json()).then(error => {
+        if (url === desiredMapUrl) $("msg").textContent = error.error || "图像生成失败";
+      }).catch(() => {});
+    }
+    loadNextMap();
+  };
+  probe.src = url;
+}
+
+function drawMap() {
+  desiredMapUrl = imageUrl(state.lead);
+  failedImages.delete(desiredMapUrl);
+  if (readyImages.has(desiredMapUrl)) showMapImage(desiredMapUrl);
+  else {
+    $("map").classList.add("loading");
+    $("msg").textContent = `正在加载 +${state.lead} 小时……`;
+  }
+  loadNextMap();
+}
+
+function update() {
+  const regions = runInfo().regions;
+  if (!regions.includes(state.region)) state.region = regions.includes("south") ? "south" : regions[0];
+  const leads = validLeads();
+  if (!leads.includes(state.lead)) state.lead = leads.find(l => l >= state.lead) ?? leads[leads.length - 1] ?? minLead(state.product);
+  const [west, south, east, north] = runInfo().bounds;
+  const stationHead = (runInfo().station_leads?.[state.product] ?? []).includes(state.lead);
+  const resolution = !leads.length ? "该产品资料准备中" : stationHead ? "原生分辨率约 5 km（气象站观测训练）" : "原生分辨率约 10 km";
+  const methodNote = stationHead ? "温露点采用以气象站实测资料训练的格点预报，覆盖整个区域。" :
+    state.product === "wind100" ? "100米风为离地100米的集合平均风矢量；色斑为该矢量的模，不等同于成员风速的集合均值。" : "";
+  const optionalNote = state.product.startsWith('cloud_') ? '云量为集合平均覆盖比例，按0–100%显示，不是云出现概率。' :
+    state.product.startsWith('solar_') ? '辐射由1小时累计能量J/m²除以3600，显示1小时平均W/m²；FDIR为地表直接辐射，不是DNI。' :
+    isRain(state.product) ? '常规降水以ERA5/HRES降水为训练目标；IMERG和PARDIG分别采用对应的降水估计资料。三者均为模式预报，独立累计，缺资料不自动替换来源。' : '';
+  $("map-resolution").textContent = `Google DeepMind · 集合均值 · ${resolution}`;
+  $("source-note").textContent = `资料：Google DeepMind WeatherNext 3 集合均值 · ${resolution}（覆盖 ${west}–${east}°E、${south}–${north}°N）。${methodNote}${optionalNote}仅显示已缓存时次。`;
+  $("rainValuesControl").hidden = !isRain(state.product);
+  $("rainValues").checked = state.rainValues;
+  const controls = `${state.run}|${state.product}|${state.region}|${regions.join(",")}`;
+  if (controls !== controlListKey) { drawGroups(); drawRegions(); controlListKey = controls; }
+  drawDownloadNote(); drawLeads(); writeHash();
+  $("dataDownload").href = "download/?" + new URLSearchParams({run: state.run});
+  $("play").disabled = !leads.length;
+  if (!leads.length) {
+    stopPlay(); desiredMapUrl = "";
+    $("img").removeAttribute("src");
+    $("map").classList.remove("loading");
+    $("msg").textContent = `${productLabel()}正在准备，当前已下载时次不足。`;
+    return;
+  }
+  drawMap();
+}
+
+function step(delta) {
+  const leads = validLeads(), i = leads.indexOf(state.lead);
+  if (!leads.length) return;
+  state.lead = leads[(i + delta + leads.length) % leads.length];
+  update();
+}
+
+function stopPlay() {
+  if (state.timer) clearInterval(state.timer);
+  state.timer = null;
+  $("play").textContent = "▶ 播放";
+}
+
+function togglePlay() {
+  if (state.timer) { stopPlay(); return; }
+  $("play").textContent = "❚❚ 暂停";
+  state.timer = setInterval(() => { if (!$("map").classList.contains("loading")) step(1); }, 900);
+}
+
+function shiftRun(delta) {
+  const i = catalog.runs.findIndex(r => r.id === state.run) + delta;
+  if (i < 0 || i >= catalog.runs.length) return;
+  state.run = catalog.runs[i].id; $("run").value = state.run; update();
+}
+
+let initRetryTimer = null, initAttempts = 0, initialized = false;
+async function fetchCatalog() {
+  const response = await fetch("api/catalog", {cache: "no-store", signal: AbortSignal.timeout(8000)});
+  if (!response.ok) {
+    const error = new Error(response.status === 401 || response.status === 403 ?
+      "登录已失效或无访问权限，请重新登录后刷新页面。" : `资料目录请求失败（HTTP ${response.status}）。`);
+    error.auth = response.status === 401 || response.status === 403;
+    throw error;
+  }
+  if (!(response.headers.get("Content-Type") || "").includes("application/json"))
+    throw new Error("服务器未返回资料目录，请检查登录状态后刷新页面。");
+  const next = await response.json();
+  if (!Array.isArray(next.runs)) throw new Error("资料目录格式异常。");
+  return next;
+}
+
+async function init() {
+  if (initialized) return;
+  clearTimeout(initRetryTimer);
+  try {
+    catalog = await fetchCatalog();
+    if (!catalog.runs.length) throw new Error(catalog.catalog_status === "preparing" ?
+      "本地资料索引正在准备，稍后自动重试。" : "暂无已缓存资料，稍后自动重试。");
+  } catch (error) {
+    const delay = Math.min(15000, 2000 * ++initAttempts);
+    $("msg").textContent = error.name === "TimeoutError" ? "资料目录读取超时，将自动重试。" : error.message;
+    if (!error.auth) initRetryTimer = setTimeout(init, delay);
+    return;
+  }
+  initialized = true;
+  readHash();
+  if (!catalog.runs.some(r => r.id === state.run)) state.run = catalog.runs[0].id;
+  if (!catalog.products[state.product]) state.product = "rain1";
+  if (!catalog.regions[state.region]) state.region = "south";
+  drawRuns();
+  $("run").onchange = () => { state.run = $("run").value; update(); };
+  $("runPrev").onclick = () => shiftRun(1);
+  $("runNext").onclick = () => shiftRun(-1);
+  $("play").onclick = togglePlay;
+  $("rainValues").onchange = () => { state.rainValues = $("rainValues").checked; update(); };
+  document.addEventListener("keydown", e => {
+    if (e.target.tagName === "SELECT") return;
+    if (e.key === "ArrowRight") step(1);
+    if (e.key === "ArrowLeft") step(-1);
+  });
+  update();
+  setInterval(refreshCatalog, 15000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshCatalog(); });
+  $("run").onblur = drawRuns;
+}
+
+async function refreshCatalog() {
+  if (refreshingCatalog || document.hidden) return;
+  refreshingCatalog = true;
+  try {
+    const next = await fetchCatalog();
+    drawDownloadNote();
+    if (!next.runs.length || JSON.stringify(next) === JSON.stringify(catalog)) return;
+    catalog = next;
+    if (!catalog.runs.some(r => r.id === state.run)) { stopPlay(); state.run = catalog.runs[0].id; }
+    if (document.activeElement !== $("run")) drawRuns();
+    update();
+  } catch (error) {
+    $("download-note").hidden = false;
+    $("download-note").textContent = error.auth ? error.message :
+      "资料目录暂时更新失败，继续显示已有资料；将自动重试。";
+  } finally { refreshingCatalog = false; }
+}
+init().catch(error => { $("msg").textContent = error.message || "资料目录读取失败。"; });
+</script>
+</body>
+</html>

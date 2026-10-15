@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新疆风电项目百米风速下载</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#24334b;font:15px/1.6 "Microsoft YaHei",sans-serif}main{max-width:1120px;margin:28px auto;padding:0 18px 40px}header{display:flex;justify-content:space-between;gap:20px;align-items:center}h1{font-size:25px;margin:0}h2{font-size:18px;margin:0 0 12px}a{color:#1756a4}.muted{color:#60718b;font-size:13px}.panel{background:white;border:1px solid #dae3ef;border-radius:10px;padding:20px;margin-top:18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stats strong{display:block;font-size:23px;color:#174c87}.stats span{font-size:13px;color:#60718b}.controls{display:flex;flex-wrap:wrap;gap:14px;align-items:end}.controls label{display:grid;gap:4px}input,select,button{font:inherit;border:1px solid #b9c8db;padding:7px 10px;background:white;border-radius:5px}button{cursor:pointer;color:#1756a4}.action{display:inline-block;background:#195da9;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:12px}.action[aria-disabled=true]{opacity:.45;pointer-events:none}progress{width:100%;height:12px;accent-color:#195da9;margin:10px 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:9px 6px;text-align:left;border-bottom:1px solid #e6edf5;white-space:nowrap}th{color:#60718b}.ready{color:#246c46}.error{color:#b32832}.warning{color:#98640e}.pagination{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:16px}.links{display:flex;gap:12px}.points{max-height:280px;overflow:auto}details{margin-top:16px}#summary{margin-top:12px}.status-line{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}@media(max-width:650px){main{padding:0 12px}header{align-items:flex-start}h1{font-size:21px}.panel{padding:15px}.stats{grid-template-columns:repeat(2,1fr)}.stats strong{font-size:21px}}
+</style>
+</head>
+<body><main>
+<header><div><h1>新疆风电项目百米风速下载</h1><div class="muted" id="subtitle">巴里坤3 · WN3 / EC 百米风</div></div><a href="../">返回下载界面</a></header>
+<section class="panel" aria-live="polite">
+<div class="stats"><div><strong id="pointCount">—</strong><span>风机及风场点位</span></div><div><strong id="runCount">—</strong><span>已准备 / 全部起报批次</span></div><div><strong id="dayCount">—</strong><span>已准备 / 全部起报日</span></div><div><strong id="dataSize">—</strong><span>已完成数据包大小</span></div></div>
+<progress id="progress" value="0" max="163" aria-label="历史资料下载进度"></progress>
+<div class="status-line"><span id="status">正在读取项目状态……</span><span class="muted" id="updated"></span></div>
+<p class="muted" id="scope">正在读取表格时间范围……</p>
+</section>
+<section class="panel">
+<h2>下载历史预报</h2><div class="controls"><label>预报模式<select id="model"><option value="WN3">WN3 集合均值</option><option value="EC">EC（IFS）· Open-Meteo</option></select></label><label>时间步长<select id="interval"><option value="15min">15分钟 · 观测时段对齐</option><option value="hourly">逐小时 · 完整预报</option></select></label><label>开始起报日（北京时间）<input type="date" id="start"></label><label>结束起报日（北京时间）<input type="date" id="end"></label><button id="refresh">刷新进度</button></div>
+<div id="summary" aria-live="polite"></div><a id="bundle" class="action" aria-disabled="true">下载已完成日期 ZIP</a>
+<p class="muted" id="intervalNote">15分钟版按观测时段对齐，每个起报批次单独插值；可切换至逐小时原生完整预报。</p>
+<div class="table-wrap"><table><thead><tr><th>起报日（北京时间）</th><th>状态</th><th>批次</th><th>记录数</th><th>大小</th><th>下载</th></tr></thead><tbody id="days"></tbody></table></div>
+<div class="pagination"><button id="prev">上一页</button><span id="page"></span><button id="next">下一页</button></div>
+</section>
+<section class="panel"><h2>点位与取数方式</h2>
+<p id="spatialNote">气象量高度为离地 <strong>100 米</strong>。对原生 0.1° 风场的 U/V 分量分别做空间双线性插值，再合成点位风速和气象学来向风向。CSV 保留 U/V、风速、风向、经纬度、起报及有效时间。</p>
+<p class="muted" id="productNote">风速为集合均值矢量合成值，单位 m/s。ZIP 内每个起报批次有独立 CSV，可直接导入 Excel。逐小时版保存完整原生预报、原生小网格 NPZ 和来源清单。</p>
+<p class="muted">15分钟版对同一起报批次的相邻小时 U/V 分别做时间线性插值，再计算风速和风向。仅输出观测时段与该批次预报范围重叠的时间点，不向前或向后外推。端点缺测时中间值留空；CSV 标明原始小时值或插值值。15分钟资料是插值结果，保持100米高度。</p>
+<details><summary>查看全部点位坐标</summary><div class="points"><table><thead><tr><th>点位</th><th>经度</th><th>纬度</th></tr></thead><tbody id="points"></tbody></table></div></details>
+<p class="muted" id="coordinateNote">坐标按原表原值取数。入口沿用本站登录，后台下载可断点续采；下载期间需保持源电脑、WSL 服务和网站连接运行。</p>
+</section>
+</main><script>
+const $=id=>document.getElementById(id);
+let data,page=0,loadedModel='',generation=0;const pageSize=20;
+const initial=new URLSearchParams(location.search);
+if(['EC','WN3'].includes(initial.get('model')))$('model').value=initial.get('model');
+if(['hourly','15min'].includes(initial.get('interval')))$('interval').value=initial.get('interval');
+const size=b=>b>=1024**3?(b/1024**3).toFixed(2)+' GiB':b>=1024**2?(b/1024**2).toFixed(1)+' MiB':(b/1024).toFixed(1)+' KiB';
+function disable(){$('bundle').removeAttribute('href');$('bundle').setAttribute('aria-disabled','true')}
+function selection(){return data.days.filter(d=>d.day>=$('start').value&&d.day<=$('end').value)}
+function draw(){
+ if(!data)return;disable();const ec=data.model==='EC',selected=selection(),ready=selected.filter(d=>d.status==='complete');
+ const gaps=ready.filter(d=>d.source_status==='unavailable'||d.missing_rows).length;
+ $('summary').textContent=selected.length?`所选 ${selected.length} 天，${ready.length} 天已准备，共 ${ready.reduce((n,d)=>n+d.run_count,0).toLocaleString()} 个起报批次。${ready.length<selected.length?'未完成日期暂不打包。':'所选日期文件均可下载。'}${gaps?` 其中 ${gaps} 天含源端或插值端点缺测，CSV已留空标记。`:''}`:'请选择项目范围内的起报日。';
+ if(ready.length){$('bundle').href='bundle.zip?'+new URLSearchParams({model:$('model').value,start:$('start').value,end:$('end').value,interval:data.interval});$('bundle').setAttribute('aria-disabled','false')}
+ $('bundle').textContent=`下载${ec?' EC':''}${data.interval==='15min'?' 15分钟':' 逐小时'} CSV ZIP`;
+ page=Math.min(page,Math.max(0,Math.ceil(selected.length/pageSize)-1));$('days').replaceChildren();
+ for(const day of selected.slice(page*pageSize,(page+1)*pageSize)){
+  const row=document.createElement('tr'),labels={complete:'已准备',downloading:'正在下载',queued:'等待下载',error:'需要重试'};
+  const state=day.source_status==='unavailable'?'源端整批缺测 · 文件可下载':day.status==='complete'&&day.missing_rows?`已准备 · ${day.missing_rows.toLocaleString()} 条缺测`:labels[day.status]||day.status;
+  for(const value of [day.day,state,`${day.run_count} / ${day.expected_runs||24}`,day.rows?day.rows.toLocaleString():'—',day.files?size(day.files.zip.bytes):'—']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}
+  row.children[1].className=day.source_status==='unavailable'||day.missing_rows?'warning':day.status==='complete'?'ready':day.status==='error'?'error':'muted';
+  const cell=document.createElement('td');
+  if(day.files){const links=document.createElement('div');links.className='links';for(const [kind,label] of [['zip',data.interval==='15min'?'15分钟 CSV ZIP':'CSV ZIP'],['native',ec?'格点 NPZ':'原生 NPZ'],['manifest','清单']]){if(!day.files[kind])continue;const a=document.createElement('a');a.href=day.files[kind].url;a.textContent=label;links.append(a)}cell.append(links)}else{cell.textContent=day.message||'完成后可下载';cell.className='muted'}
+  row.append(cell);$('days').append(row)
+ }
+ const pages=Math.max(1,Math.ceil(selected.length/pageSize));$('page').textContent=`${page+1} / ${pages}`;$('prev').disabled=page===0;$('next').disabled=page>=pages-1;
+}
+function methods(ec){
+ $('subtitle').textContent=ec?'巴里坤3 · EC（IFS）· Open-Meteo · IFS HRES 9 km / O1280（约0.1°）':'巴里坤3 · WeatherNext 3 · 原生 0.1° 集合均值';
+ $('spatialNote').textContent=ec?'气象量高度为离地100米。55台风机对周围四个O1280原生格点的U/V分别做空间双线性插值：先在上下两条高斯纬线上沿经度插值，再沿纬度插值，最后合成风速和气象学来向风向。':'气象量高度为离地100米。对原生0.1°风场的U/V分量分别做空间双线性插值，再合成点位风速和气象学来向风向。';
+ $('productNote').textContent=ec?'EC为确定性预报，U/V由源API给出的风速和风向反算，精度受源值取整限制。风场保留原EC站点的API逐小时风速。逐小时ZIP包含完整点位CSV、13格点NPZ、原始API响应和清单。':'WN3风速为集合均值矢量合成值。逐小时ZIP保存完整原生预报、原生小网格NPZ和来源清单。CSV保留U/V、风速、风向、经纬度、起报及有效时间，单位m/s。';
+ $('coordinateNote').textContent=ec?'单机使用原表经纬度。EC风场站点为44.253075°N、94.25954°E，与WN3风场站点44.27235406°N、94.22359943°E不同。来源：ECMWF / Open-Meteo，CC BY 4.0。':'坐标按原表原值取数。入口沿用本站登录；下载期间需保持源电脑、WSL服务和网站连接运行。';
+}
+async function refresh(){
+ const model=$('model').value,interval=$('interval').value,own=++generation;$('refresh').disabled=true;
+ try{
+  const r=await fetch('../../api/wind-project?'+new URLSearchParams({model,interval}),{cache:'no-store',signal:AbortSignal.timeout(20000)});
+  if(!r.ok||!r.headers.get('content-type')?.includes('application/json'))throw Error('项目状态读取失败，请确认已登录后刷新。');
+  const result=await r.json();if(own!==generation)return;data=result;
+  const ec=model==='EC',quarter=interval==='15min',first=(data.run_start_bjt||data.start_bjt).slice(0,10),last=(data.run_end_bjt||data.end_bjt).slice(0,10);
+  for(const id of ['start','end']){$(id).min=first;$(id).max=last}
+  if(loadedModel!==model){$('start').value=first;$('end').value=last;loadedModel=model}
+  $('points').replaceChildren();for(const p of data.points){const row=document.createElement('tr');for(const value of [p.id,p.lon,p.lat]){const td=document.createElement('td');td.textContent=value;row.append(td)}$('points').append(row)}
+  methods(ec);$('pointCount').textContent=data.points.length;$('runCount').textContent=`${data.complete_runs.toLocaleString()} / ${data.expected_runs.toLocaleString()}`;$('dayCount').textContent=`${data.complete_days} / ${data.total_days}`;$('dataSize').textContent=size(data.total_bytes);$('progress').max=data.total_days;$('progress').value=data.complete_days;
+  const errors=data.days.filter(d=>d.status==='error').length,active=data.days.filter(d=>d.status==='downloading').length;
+  const missing=data.missing_rows?` ${data.missing_rows.toLocaleString()} 条点位记录缺测，CSV已留空标记。`:'';
+  $('status').textContent=(ec?`EC ${data.complete_days} 份日包已生成；${data.retrieved_runs} 批源端有资料，${data.unavailable_runs} 批整批不可用。`:data.complete_days===data.total_days?(quarter?'全部15分钟资料已生成。':'全部历史批次已下载。'):errors?`${errors} 天尚未处理完成，已完成文件可以下载。`:quarter?'正在生成15分钟观测对齐资料。':active?`正在补下载历史资料，${active} 天处理中。`:'历史下载队列已登记，等待继续处理。')+missing;
+  $('status').className=errors?'error':'';
+  $('intervalNote').textContent=quarter?'按北京时间整点、15、30、45分钟对齐，仅保留观测时段内且在各批次1至末小时预报范围内的时间点。不跨缺测连接、不外推；整点保留各点位逐小时值。':ec?'每天北京时间20时起报一批，保存0至360小时完整预报。6月10日整批不可用；8月26日只有0至72小时，缺测行数值留空。':'每小时起报均包含：主批次360小时，其余批次48小时。完整预报有效时间可延伸到观测时段之后。';
+  $('scope').textContent=`原表观测时段：${data.start_bjt.replace('T',' ')} 至 ${data.end_bjt.replace('T',' ')}（北京时间）。55台风机 + 1个风场点位。${ec?`EC起报日为${first}至${last}，每天20时；3月13日起报用于覆盖3月14日观测。`:`共${data.expected_runs.toLocaleString()}个每小时起报批次。`}`;
+  $('updated').textContent=data.updated_utc?'更新于 '+new Date(data.updated_utc).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false}):'';draw();
+ }catch(e){if(own!==generation)return;$('status').textContent=e.message;$('status').className='error';disable()}
+ finally{if(own===generation)$('refresh').disabled=false}
+}
+for(const id of ['start','end'])$(id).addEventListener('change',()=>{page=0;draw()});
+for(const id of ['model','interval'])$(id).addEventListener('change',()=>{data=null;page=0;disable();$('days').replaceChildren();for(const id of ['runCount','dayCount','dataSize'])$(id).textContent='—';$('progress').value=0;$('summary').textContent='正在读取所选资料……';$('status').textContent='正在读取所选模式和时间步长……';refresh()});
+$('refresh').addEventListener('click',refresh);$('prev').addEventListener('click',()=>{page--;draw()});$('next').addEventListener('click',()=>{page++;draw()});refresh();setInterval(refresh,20000);
+</script></body></html>

@@ -1,0 +1,159 @@
+{
+  "captured_date": "2026-10-15",
+  "source": "WSL Ubuntu wn3_portal with shared WN3 readers and one regression fixture",
+  "files": [
+    {
+      "file": "portal/catalog_index.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "9fa0679ed328e6de28b5a368cd1300330cd7808c6abc7dd1609abcff52bc8559",
+      "bytes": 9696,
+      "repository_sha256": "7b70577d8cfae5bf1fae655c6c9575934ff3bce12e87433dd55eff1c5a5626c1",
+      "repository_bytes": 9697,
+      "adaptation": "Default catalog state to the current user home directory."
+    },
+    {
+      "file": "portal/cities.json",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "e08a639e76542dd42a814199c094fe645f53309fdbb4610f8af6d03ce0a4a786",
+      "bytes": 100258,
+      "repository_sha256": "e08a639e76542dd42a814199c094fe645f53309fdbb4610f8af6d03ce0a4a786",
+      "repository_bytes": 100258
+    },
+    {
+      "file": "portal/downloads.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "3b7c123130ed359c93321e56de437b62ffac993f93aad17ac32511abefa6eddc",
+      "bytes": 12527,
+      "repository_sha256": "3b7c123130ed359c93321e56de437b62ffac993f93aad17ac32511abefa6eddc",
+      "repository_bytes": 12527
+    },
+    {
+      "file": "portal/ec_wind_projects.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "a135a6db7fda3287a18298a56b707e8a70f1d66dc5e96d1fed322965b41dfa94",
+      "bytes": 7932,
+      "repository_sha256": "a135a6db7fda3287a18298a56b707e8a70f1d66dc5e96d1fed322965b41dfa94",
+      "repository_bytes": 7932
+    },
+    {
+      "file": "portal/geography.json",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "10bd7cc923a2f6c686ce5bc88a3b5feec6baf8b574612d784596ef7b03263501",
+      "bytes": 420849,
+      "repository_sha256": "10bd7cc923a2f6c686ce5bc88a3b5feec6baf8b574612d784596ef7b03263501",
+      "repository_bytes": 420849
+    },
+    {
+      "file": "portal/render.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "b79974019764a12c12c3592bc9a56ec456e76f5272e1b3ff61760a6ecec874c7",
+      "bytes": 30292,
+      "repository_sha256": "d7c1c57ed6b2f97d421a72d540cf5420a84cc27f027b133446e8685eac1aed02",
+      "repository_bytes": 30191,
+      "adaptation": "Load the two bundled shared readers without absolute sys.path injection."
+    },
+    {
+      "file": "portal/server.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "8c69bb630fa56ff3b147297a553f54dcf53947fcdb118a6feecc071cc2ee982d",
+      "bytes": 4874,
+      "repository_sha256": "8c69bb630fa56ff3b147297a553f54dcf53947fcdb118a6feecc071cc2ee982d",
+      "repository_bytes": 4874
+    },
+    {
+      "file": "portal/static/download.html",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "1f7be1b67b342392cfe797314b51dc840a0d0c6035835cc78b8e655a43e1a26f",
+      "bytes": 12506,
+      "repository_sha256": "1f7be1b67b342392cfe797314b51dc840a0d0c6035835cc78b8e655a43e1a26f",
+      "repository_bytes": 12506
+    },
+    {
+      "file": "portal/static/index.html",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "3ffbae5491dbdc39154c23b543b712bf921f8d5d1e4452c3e4fdaf38f6ddf4d5",
+      "bytes": 21197,
+      "repository_sha256": "3ffbae5491dbdc39154c23b543b712bf921f8d5d1e4452c3e4fdaf38f6ddf4d5",
+      "repository_bytes": 21197
+    },
+    {
+      "file": "portal/static/xinjiang-wind.html",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "988a44e40951d7e7b05f0a4865497dd8d240f750a8ce507f9c09778aafa0ed06",
+      "bytes": 14353,
+      "repository_sha256": "988a44e40951d7e7b05f0a4865497dd8d240f750a8ce507f9c09778aafa0ed06",
+      "repository_bytes": 14353
+    },
+    {
+      "file": "portal/test_catalog_index.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "f0ba0ee7305787e3ad9447187c0135d30bd1e09909de3bd1add3410530759e3b",
+      "bytes": 7869,
+      "repository_sha256": "b671219e95c2703d93bf4df1f358a709eb8c813047433a6b0a396d7ee1f9d27b",
+      "repository_bytes": 8715,
+      "adaptation": "Bundle the historical regression fixture, compare its existing fields alongside new optional fields, and size the test TCP backlog for eight concurrent clients."
+    },
+    {
+      "file": "portal/test_frontend.js",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "64c99040f9f4fa1268c9d78cc8ddc3cd06f925d4577ff37c2cc9404f80067e48",
+      "bytes": 2596,
+      "repository_sha256": "64c99040f9f4fa1268c9d78cc8ddc3cd06f925d4577ff37c2cc9404f80067e48",
+      "repository_bytes": 2596
+    },
+    {
+      "file": "portal/tests/fixtures/legacy_render.py",
+      "source_role": "regression-fixture",
+      "source_sha256": "6478f6a8facdb6f4f16218f9eb299192f90ba80c89e753e41665f71989769bb9",
+      "bytes": 27110,
+      "repository_sha256": "6478f6a8facdb6f4f16218f9eb299192f90ba80c89e753e41665f71989769bb9",
+      "repository_bytes": 27110
+    },
+    {
+      "file": "portal/weathernext3.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "281e1e8ceaf64f193001e2c8f9c6584eede74695e64a9b990027601000279f7f",
+      "bytes": 22205,
+      "repository_sha256": "281e1e8ceaf64f193001e2c8f9c6584eede74695e64a9b990027601000279f7f",
+      "repository_bytes": 22205
+    },
+    {
+      "file": "portal/weathernext3_native_cache.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "1703cffc26a64dea4be603bbfabfc3c4b8b44847f3cb465b5b50241737391c92",
+      "bytes": 20847,
+      "repository_sha256": "1703cffc26a64dea4be603bbfabfc3c4b8b44847f3cb465b5b50241737391c92",
+      "repository_bytes": 20847
+    },
+    {
+      "file": "portal/wind_project_15min.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "7efc2aaca53091770468835a5eb70a740a3c06c0ce2c6e0cd7c33a42437c312e",
+      "bytes": 12705,
+      "repository_sha256": "7efc2aaca53091770468835a5eb70a740a3c06c0ce2c6e0cd7c33a42437c312e",
+      "repository_bytes": 12705
+    },
+    {
+      "file": "portal/wind_project_worker.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "68bfb834ab3677f036974f11acf3bd8017243ac26d52909c656840ad5661484a",
+      "bytes": 23520,
+      "repository_sha256": "bc763c6c59b7f49bb6e155b541904d2c9ac7b62f316dcd147e1043fb836662e1",
+      "repository_bytes": 23551,
+      "adaptation": "Allow WN3_BACKEND_ROOT to select the external acquisition backend."
+    },
+    {
+      "file": "portal/wind_projects.py",
+      "source_role": "runtime-and-tests",
+      "source_sha256": "499df0a939f51dd1bc2568013684ec9aabff0fc05ce48f5dc7562cccb05d291f",
+      "bytes": 10748,
+      "repository_sha256": "499df0a939f51dd1bc2568013684ec9aabff0fc05ce48f5dc7562cccb05d291f",
+      "repository_bytes": 10748
+    }
+  ],
+  "excluded": [
+    "runtime data, caches, logs, backups and generated verification results",
+    "deploy_verify.py and verify_isolated.py: historical scripts tied to an obsolete local backup"
+  ],
+  "adaptation_policy": "Paths, bundled imports and existing test portability only; plotting and weather calculations retained."
+}

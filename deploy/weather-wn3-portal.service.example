@@ -1,0 +1,15 @@
+# systemd --user template. Adapt paths before installing.
+[Unit]
+Description=WeatherNext 3 forecast product portal
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/repos/weathernext3-portal/portal
+ExecStart=%h/.venvs/wn3-portal/bin/python server.py --port 8515
+EnvironmentFile=-%h/.config/wn3-portal.env
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

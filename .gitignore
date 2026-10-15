@@ -1,0 +1,43 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+secrets.toml
+**/secrets.toml
+credentials*.json
+*service-account*.json
+application_default_credentials.json
+
+# Runtime weather products, indexes, caches and working files
+cache/
+state/
+.cache/
+.local/
+.backups/
+.previews/
+*.npz
+*.npy
+*.nc
+*.grib
+*.grib2
+*.zip
+*.tar
+*.tgz
+*.lock
+*.tmp
+*.download
+*.log
+portal/verification-results.json
+
+# Python / editor files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

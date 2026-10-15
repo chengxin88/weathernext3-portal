@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15",
+  "python_catalog_tests": 5,
+  "node_frontend_test": "passed",
+  "shared_readers": "loaded from this repository",
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 21197
+    },
+    {
+      "path": "/download/",
+      "status": 200,
+      "bytes": 12506
+    },
+    {
+      "path": "/download/xinjiang-wind/",
+      "status": 200,
+      "bytes": 14353
+    },
+    {
+      "path": "/api/catalog",
+      "status": 200,
+      "bytes": 925763
+    }
+  ],
+  "map": {
+    "query": {
+      "run": "2026101503",
+      "lead": 1,
+      "product": "rain1",
+      "region": "south",
+      "values": 1
+    },
+    "bytes": 215901,
+    "size": [
+      946,
+      718
+    ],
+    "sha256": "f349b5aa77b705815fb15f3bbb139c2d92b47eb04921ddb7affd692cb9691b5d",
+    "seconds": 2.925
+  },
+  "runtime_state": "temporary isolated preview cache/index, existing weather data read only"
+}
